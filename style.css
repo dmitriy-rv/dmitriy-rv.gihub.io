@@ -1,0 +1,297 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Comfortaa', cursive;
+	box-sizing: border-box;
+}
+
+.wrap{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+    position: relative;
+}
+menu{
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+menu .logo{
+	background: url('img/logo.svg') 0 0 no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	width: 150px;
+	height: 150px;
+
+}
+
+.main{
+	background: url('img/main-6.jpg') 0 0 no-repeat;
+	background-size: 100%;
+	width: 100%;
+	height: 100vh;
+	color:#fff;
+	background-attachment: fixed;
+}
+
+.main .content{
+    max-width: 600px;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 110px;
+}
+
+.main .title{
+	font-size: 32px;
+	margin-bottom: 20px;
+	font-family: 'Arimo', sans-serif;
+}
+
+.main .sub-title{
+	font-size: 20px;
+	margin-bottom: 60px;
+	font-style: italic;	
+}
+
+.main .button{
+	display: inline-block;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    width: 170px;
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+    margin-left: 25px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.main .button:hover{
+	background-color: #fff;
+	color:#571617;
+}
+
+.utp1{
+	width: 100%;
+	background-color: #fff;
+	padding-bottom: 50px
+}
+
+.utp1 .title{
+	margin-top: 50px;
+	margin-bottom: 60px;
+	text-align: center;
+	font-size: 36px;
+	font-family: 'Arimo', sans-serif;
+}
+
+.utp1 .item{
+	display: inline-block;
+	width: 250px;
+	margin-left: 23px;
+	margin-right: 23px;
+	text-align: center;
+	vertical-align: top;
+}
+
+.utp1 .item img{
+	width: 150px;
+	height: 150px;
+	margin-bottom: 25px;
+}
+
+.utp1 .item .text{
+	font-size: 18px;
+}
+
+.card{
+	width: 100%;
+	height: 100vh;
+	background: url('img/card.jpg') 0 0 no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.card .content{
+	width: 600px;
+	background-color: #fff;
+	height: 100%;
+
+	border-radius: 4px;
+	-webkit-box-shadow: 0px 2px 3px 0px rgb(0, 0, 0);
+		box-shadow: 0px 2px 3px 0px rgb(0, 0, 0);	
+	padding: 20px;
+	position: relative;
+}
+
+
+.card .title{
+	margin-top: 20px;
+	margin-bottom: 25px;
+	text-align: center;
+	font-size: 36px;
+	font-family: 'Arimo', sans-serif;
+}
+
+.card ul{
+	font-size: 20px;
+	margin-left: 20px;
+}
+
+.card li{
+	margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.card .button{
+	display: inline-block;
+    height: 50px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 170px;
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+    transition: 0.4s;
+    cursor: pointer;	
+    position: absolute;
+    bottom: 40px;
+}
+
+.card .button:hover{
+	background-color: #fff;
+	color:#571617;
+}
+
+.list{
+	width: 100%;
+}
+
+.list .title{
+	margin-top: 20px;
+	margin-bottom: 25px;
+	text-align: center;
+	font-size: 36px;
+	font-family: 'Arimo', sans-serif;
+}
+
+
+
+.list .flex-wrap{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.list .item{
+	display: inline-block;
+	width: 270px;
+	height: 300px;
+	border-radius: 4px;
+	margin-bottom: 30px;
+	-webkit-box-shadow: 0px 3px 5px 0px #999;
+	box-shadow: 0px 3px 5px 0px #999;	
+}
+
+
+.list .item img{
+	width: 100%;
+	height: 200px;
+	border-radius: 4px 4px 0px 0px;
+}
+
+.list .item .text{
+	text-align: center;
+}
+
+.list .item .number{
+	font-family: 'Arimo', sans-serif;
+	margin-top: 8px;
+    font-size: 20px;
+}
+
+.utp2{
+	width: 100%;
+	height: 400px;
+	background: url('img/main-22.jpg') 0 0 no-repeat;
+	background-size: cover;
+	padding-top: 45px;
+	padding-bottom: 20px;
+}
+
+.utp2 .content{
+	width: 600px;
+	height: 100%;
+	float: right;
+	color:#fff;
+}
+
+.utp2 .title{
+	font-size: 36px;
+	font-family: 'Arimo', sans-serif;	
+	margin-bottom: 30px;
+}
+
+.utp2 ul{
+	margin-left: 20px;
+    font-size: 23px;
+}
+
+.utp2 li{
+	margin-bottom: 20px;
+}
+
+.objections{
+	width: 100%;
+	height: 100vh;
+}
+
+.payway{
+	width: 100%;
+	height: 500px;
+	background: url('img/pay.jpg') 0 0 no-repeat;
+	background-size: cover;
+	background-position: center;
+	color:#fff;
+}
+
+.payway .title{
+	padding-top: 50px;
+	margin-bottom: 60px;
+	text-align: center;
+	font-size: 36px;
+	font-family: 'Arimo', sans-serif;
+}
+
+.payway .item{
+	display: inline-block;
+	width: 250px;
+	margin-left: 23px;
+	margin-right: 23px;
+	text-align: center;
+	vertical-align: top;
+}
+
+.payway .item img{
+	width: 150px;
+	height: 150px;
+	margin-bottom: 25px;
+}
+
+.payway .item .text{
+	font-size: 18px;
+}
+
+.me{
+	width: 100%;
+	height: 100vh;
+}
