@@ -15,15 +15,30 @@ menu{
 	position: absolute;
 	top: 0;
 	width: 100%;
+	padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgba(0,0,0,0.35);
 }
 
-menu .logo{
+menu img{
 	background: url('img/logo.svg') 0 0 no-repeat;
 	-webkit-background-size: 100%;
 	background-size: 100%;
-	width: 150px;
-	height: 150px;
-
+	width: 75px;
+    height: 75px;
+    float: left;
+    margin-right: 15px;
+}
+menu .name{
+	color:#fff;
+    font-size: 32px;
+    padding-bottom: 2px;
+    padding-top: 8px;
+}
+menu .subname{
+	color:#fff;
+	font-size: 13px;
+	font-style: italic;
 }
 
 .main{
@@ -126,6 +141,8 @@ menu .logo{
 	-webkit-box-shadow: 0px 2px 3px 0px rgb(0, 0, 0);
 		box-shadow: 0px 2px 3px 0px rgb(0, 0, 0);	
 	padding: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
 	position: relative;
 }
 
@@ -135,6 +152,7 @@ menu .logo{
 	margin-bottom: 25px;
 	text-align: center;
 	font-size: 36px;
+	font-weight: bold;
 	font-family: 'Arimo', sans-serif;
 }
 
@@ -144,8 +162,8 @@ menu .logo{
 }
 
 .card li{
-	margin-bottom: 10px;
-    font-size: 25px;
+	margin-bottom: 20px;
+    font-size: 22px;
 }
 
 .card .button{
@@ -170,13 +188,15 @@ menu .logo{
 
 .list{
 	width: 100%;
+	padding-bottom: 50px;
 }
 
 .list .title{
-	margin-top: 20px;
-	margin-bottom: 25px;
+	margin-top: 50px;
+	margin-bottom: 60px;
 	text-align: center;
 	font-size: 36px;
+	font-weight: bold;
 	font-family: 'Arimo', sans-serif;
 }
 
@@ -195,9 +215,9 @@ menu .logo{
 .list .item{
 	display: inline-block;
 	width: 270px;
-	height: 300px;
+	height: 345px;
 	border-radius: 4px;
-	margin-bottom: 30px;
+	margin-bottom: 60px;
 	-webkit-box-shadow: 0px 3px 5px 0px #999;
 	box-shadow: 0px 3px 5px 0px #999;	
 }
@@ -209,14 +229,17 @@ menu .logo{
 	border-radius: 4px 4px 0px 0px;
 }
 
-.list .item .text{
-	text-align: center;
+.list .item .text ul{
+	margin-left: 20px;
+    list-style-type: circle;
 }
 
 .list .item .number{
 	font-family: 'Arimo', sans-serif;
 	margin-top: 8px;
+	margin-bottom: 10px;
     font-size: 20px;
+    text-align: center;
 }
 
 .utp2{
