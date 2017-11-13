@@ -5,6 +5,42 @@
 	box-sizing: border-box;
 }
 
+.popup-wrap{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(255,255,255,0.7);
+	z-index: 100;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+.flex{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;	
+}
+
+.blur{
+	-webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    filter: blur(5px);
+}
+
+.popup-wrap .content{
+	width: 800px;
+	height: 600px;
+	background-color: #fff;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 2px 3px 0px rgb(0, 0, 0);
+	box-shadow: 0px 2px 3px 0px rgb(0, 0, 0);	
+}
+
 .wrap{
     max-width: 1200px;
     margin: auto;
@@ -13,11 +49,15 @@
 }
 menu{
 	position: absolute;
+	z-index: 10;
 	top: 0;
 	width: 100%;
 	padding-top: 15px;
     padding-bottom: 15px;
     background-color: rgba(0,0,0,0.35);
+}
+menu .logo{
+	float: left;
 }
 
 menu img{
@@ -39,6 +79,23 @@ menu .subname{
 	color:#fff;
 	font-size: 13px;
 	font-style: italic;
+}
+menu .call{
+    float: right;
+    color: #fff;
+}
+
+menu .call .item{
+	margin-bottom: 10px;
+	font-size: 18px;
+
+	font-weight: bold;
+}
+
+menu .call .item a{
+	color:#fff;
+	text-decoration: none;
+		font-family: 'Arimo', sans-serif;
 }
 
 .main{
@@ -89,6 +146,26 @@ menu .subname{
 	color:#571617;
 }
 
+.main .arrow{
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	border: 1px solid #fff;
+	position: absolute;
+	left: 50%;
+	bottom: 30px;
+	margin-left: -50px;
+	text-align: center;
+    line-height: 44px;
+    font-size: 28px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.main .arrow:hover{
+	line-height: 55px;
+}
+
 .utp1{
 	width: 100%;
 	background-color: #fff;
@@ -124,7 +201,7 @@ menu .subname{
 
 .card{
 	width: 100%;
-	background: url('img/card.jpg') 0 0 no-repeat;
+	background: url('img/card.jpeg') 0 0 no-repeat;
 	background-size: 100%;
 	background-attachment: fixed;
 	padding-top: 50px;
@@ -154,6 +231,11 @@ menu .subname{
 	font-family: 'Arimo', sans-serif;
 }
 
+.card .title.title2{
+	margin-top: 50px;
+	margin-bottom: 60px;	
+}
+
 .card ul{
 	font-size: 20px;
 	margin-left: 20px;
@@ -162,6 +244,35 @@ menu .subname{
 .card li{
 	margin-bottom: 20px;
     font-size: 22px;
+}
+.card .flex-wrap{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.card .item{
+	display: inline-block;
+	width: 235px;
+	margin-left: 23px;
+	margin-right: 23px;
+	text-align: center;
+	vertical-align: top;
+	margin-bottom: 50px;
+}
+
+.card .item img{
+	width: 130px;
+	height: 130px;
+	margin-bottom: 25px;
+}
+
+.card .item .text{
+	font-size: 18px;
 }
 
 .card .button{
@@ -389,11 +500,122 @@ menu .subname{
 }
 
 .me .text{
-    width: 500px;
+    width: 600px;
+    padding-left: 100px;
     display: inline-block;
     font-size: 18px;
 }
 .me .avatar{
 	display: inline-block;
 	vertical-align: top;
+	margin-left: 50px;
+}
+
+.me .avatar img{
+	width: 250px;
+	height: 250px;
+	border-radius: 150px;
+	margin-bottom: 20px;
+}
+
+.me .avatar .name{
+	font-family: 'Arimo', sans-serif;
+	font-size: 20px;
+    text-align: center;
+}
+
+.contacts{
+	width: 100%;
+	height: 100vh;
+	background: url('img/contacts.jpg') 0 0 no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.contacts .title{
+	padding-top: 50px;
+	margin-bottom: 60px;
+	text-align: center;
+	font-size: 36px;
+	font-family: 'Arimo', sans-serif;
+}
+
+.contacts .button{
+	display: inline-block;
+    height: 50px;
+    border: 1px solid #571617;
+    border-radius: 5px;
+    width: 250px;
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+    transition: 0.4s;
+    cursor: pointer;	
+    letter-spacing: 3px;
+    margin-top: 20px;
+    background-color: #571617;
+    color:#fff;
+}
+
+.contacts .button:hover{
+	background-color: #fff;
+	color:#571617;
+}
+
+.contacts .content{
+	width: 100%;
+	background-color: #fff;
+	padding-bottom: 50px;
+	-webkit-box-shadow: 0px 5px 10px 0px #999;
+	box-shadow: 0px 5px 10px 0px #999;	
+	border-radius: 4px;
+}
+
+.contacts .flex-wrap{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.contacts .item{
+	display: inline-block;
+	width: 300px;
+	text-align: center;
+	font-size: 25px;
+}
+
+.contacts .item span{
+	display: block;
+	text-align: center;
+	font-size: 96px;
+	font-weight: bold;
+	font-family: 'Arimo', sans-serif;
+}
+
+.contacts .text{
+	padding-top: 50px;
+	margin-bottom: 15px;
+	text-align: center;
+	font-size: 30px;
+	font-family: 'Arimo', sans-serif;
+}
+
+.contacts .price{
+	display: block;
+	text-align: center;
+	font-family: 'Arimo', sans-serif;
+	font-size: 44px;
+	font-weight: bold;
+}
+
+.contacts .button-wrap{
+    width: 70%;
+    margin: auto;
+    margin-top: 25px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
