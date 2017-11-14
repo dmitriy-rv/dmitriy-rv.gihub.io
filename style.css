@@ -213,7 +213,7 @@ menu .call .item a{
 .card{
 	width: 100%;
 	background: url('img/card.jpeg') 0 0 no-repeat;
-	background-size: 100%;
+	background-size: cover;
 	background-attachment: fixed;
 	padding-top: 50px;
 	padding-bottom: 50px;
@@ -655,5 +655,173 @@ menu .call .item a{
 	.payway .item{
 		width: 300px;
 		margin-bottom: 30px;	
+	}
+}
+
+@media (max-width: 1023px) {
+	.wrap{
+		padding-left: 0px;
+	    padding-right: 0px;
+	    margin-left: 20px;
+	    margin-right: 20px;
+	    width: initial;
+	}
+
+	menu{
+		background-color: rgba(0,0,0,0);
+	}
+
+	menu .call{
+		display: none;
+	}
+
+	.main{
+		background-image: url('img/main-mobile.jpg');
+		background-size:cover;
+		height: initial;
+	}
+
+	.main .content{
+		width: 100%;
+	    right: 0;
+	    position: relative;
+	    bottom: 0;
+	    padding-top: 150px;
+	    text-align: center;
+	    padding-bottom: 30px;
+	}
+
+	.main .title{
+		font-size: 24px;
+	}
+
+	.main .sub-title{
+		font-size: 16px;
+	}
+
+	.main .button{
+	    margin-left: 0;
+    	margin-bottom: 20px;
+	}
+
+	.main .arrow{
+		display: none;
+	}
+	.utp1 .title{
+		font-size: 28px;
+	}
+	.utp1 .item{
+	    margin-left: 0px;
+	    margin-right: 0px;
+	    width: 100%;
+	    margin-bottom: 48px;
+	}
+
+	.card{
+		background-image: url('img/card-mobile.jpg');
+	}
+	.card .content{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.card .title{
+		font-size: 28px;
+    	margin-bottom: 40px;
+	}
+	.card li{
+		font-size: 17px;
+	}
+
+	.card .item{
+	    margin-left: 0px;
+	    margin-right: 0px;
+	    width: 100%;
+	    margin-bottom: 48px;
+	}
+
+	.list .title{
+		font-size: 28px;
+	}
+
+	.list .item{
+	    width: 100%;
+	    height: auto;
+	    padding-bottom: 15px;
+	}
+	.list .item img{
+		height: auto;
+	}
+
+	.utp2{
+		height: auto;
+		background-image: url('img/utp2-mobile.jpg');
+	}
+	.utp2 .content{
+		width: auto;
+    	height: auto;
+    	float: none;
+	}
+	.utp2 .title{
+		font-size: 28px;
+	}
+	.utp2 ul{
+		font-size: 20px;
+	}
+	.objections .title{
+		font-size: 28px;
+	}
+	.objections .item{
+		height: auto;
+	}
+
+	.payway .title{
+		font-size: 28px;
+	}
+	.payway .item{
+	    margin-left: 0px;
+	    margin-right: 0px;
+	    width: 100%;
+	    margin-bottom: 48px;
+	}
+
+	.me .title{
+		font-size: 28px;
+	}
+	.me .text{
+	    width: initial;
+	    padding-left: 0;
+	}
+
+	.me .avatar{
+		margin-left: 0;
+		display: block;
+    	margin-top: 35px;
+	}
+
+	.me .avatar img{
+	    margin: auto;
+	    margin-bottom: 20px;
+	    display: block;
+	}
+
+	.final{
+		background-size: cover;
+    	height: auto;
+    	background-image: url('img/contacts-mobile.jpg');
+	}
+
+	.final .text{
+		padding-top: 80px;
+	}
+	.final .item{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.final .item a{
+		color: #000;
+	}
+
+	.final .button-wrap{
+		margin-top: 50px;
 	}
 }
