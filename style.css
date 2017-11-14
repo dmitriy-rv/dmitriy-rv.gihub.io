@@ -47,6 +47,17 @@
     height: 100%;
     position: relative;
 }
+
+.flex-wrap{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
 menu{
 	position: absolute;
 	z-index: 10;
@@ -376,6 +387,7 @@ menu .call .item a{
 	height: 400px;
 	background: url('img/main-22.jpg') 0 0 no-repeat;
 	background-size: cover;
+	background-position:center;
 	padding-top: 45px;
 	padding-bottom: 20px;
 }
@@ -524,7 +536,7 @@ menu .call .item a{
     text-align: center;
 }
 
-.contacts{
+.final{
 	width: 100%;
 	height: 100vh;
 	background: url('img/contacts.jpg') 0 0 no-repeat;
@@ -535,7 +547,7 @@ menu .call .item a{
 	padding-bottom: 50px;
 }
 
-.contacts .title{
+.final .title{
 	padding-top: 50px;
 	margin-bottom: 60px;
 	text-align: center;
@@ -543,7 +555,7 @@ menu .call .item a{
 	font-family: 'Arimo', sans-serif;
 }
 
-.contacts .button{
+.final .button{
 	display: inline-block;
     height: 50px;
     border: 1px solid #571617;
@@ -560,12 +572,12 @@ menu .call .item a{
     color:#fff;
 }
 
-.contacts .button:hover{
+.final .button:hover{
 	background-color: #fff;
 	color:#571617;
 }
 
-.contacts .content{
+.final .content{
 	width: 100%;
 	background-color: #fff;
 	padding-bottom: 50px;
@@ -574,20 +586,20 @@ menu .call .item a{
 	border-radius: 4px;
 }
 
-.contacts .flex-wrap{
+.final .flex-wrap{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
 
-.contacts .item{
+.final .item{
 	display: inline-block;
 	width: 300px;
 	text-align: center;
 	font-size: 25px;
 }
 
-.contacts .item span{
+.final .item span{
 	display: block;
 	text-align: center;
 	font-size: 96px;
@@ -595,7 +607,7 @@ menu .call .item a{
 	font-family: 'Arimo', sans-serif;
 }
 
-.contacts .text{
+.final .text{
 	padding-top: 50px;
 	margin-bottom: 15px;
 	text-align: center;
@@ -603,7 +615,7 @@ menu .call .item a{
 	font-family: 'Arimo', sans-serif;
 }
 
-.contacts .price{
+.final .price{
 	display: block;
 	text-align: center;
 	font-family: 'Arimo', sans-serif;
@@ -611,11 +623,37 @@ menu .call .item a{
 	font-weight: bold;
 }
 
-.contacts .button-wrap{
+.final .button-wrap{
     width: 70%;
     margin: auto;
     margin-top: 25px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+}
+
+.final .contacts{
+
+}
+
+@media (max-width: 1279px) {
+	.wrap{
+		width: 100%;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.main .content{
+	    right: 30px;
+	}
+	.utp1 .item{
+		width: 300px;
+		margin-bottom: 30px;
+	}
+	.payway{
+		height: initial;
+	}
+	.payway .item{
+		width: 300px;
+		margin-bottom: 30px;	
+	}
 }
