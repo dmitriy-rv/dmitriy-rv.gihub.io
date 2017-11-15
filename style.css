@@ -63,7 +63,10 @@
 
 .popup-wrap .phone-form,
 .popup-wrap .email-form,
-.popup-wrap .vk-form{
+.popup-wrap .vk-form,
+.popup-wrap .success-email,
+.popup-wrap .success-phone,
+.popup-wrap .error-form{
 	display: none;
 }
 

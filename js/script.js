@@ -30,6 +30,9 @@ $(".phone-click").click(function(){
 	$('.phone-form').show();
 	$('.email-form').hide();
 	$('.vk-form').hide();
+	$('.success-email').hide();
+	$('.success-phone').hide();
+	$('.error-form').hide();
 });
 
 $(".email-click").click(function(){
@@ -40,6 +43,9 @@ $(".email-click").click(function(){
 	$('.phone-form').hide();
 	$('.email-form').show();
 	$('.vk-form').hide();
+	$('.success-email').hide();
+	$('.success-phone').hide();
+	$('.error-form').hide();
 });
 
 $(".vk-click").click(function(){
@@ -50,5 +56,55 @@ $(".vk-click").click(function(){
 	$('.phone-form').hide();
 	$('.email-form').hide();
 	$('.vk-form').show();
+	$('.success-email').hide();
+	$('.success-phone').hide();
+	$('.error-form').hide();
 });
 
+$('#send-email').click(function(){
+	console.log($('#name-email').val());
+	console.log($('#answer-email').val());
+
+	$.ajax({
+      type: "GET", //Метод отправки
+      url: "/send-mail.php", //путь до php фаила отправителя
+      data: {
+      	name:$('#name-email').val(),
+      	email:$('#answer-email').val()
+      },
+      success: function() {
+        //код в этом блоке выполняется при успешной отправке сообщения
+        console.log("Ваше сообщение отпрвлено!");
+        $('.phone-form').hide();
+		$('.email-form').hide();
+		$('.vk-form').hide();
+		$('.success-email').show();
+		$('.success-phone').hide();
+		$('.error-form').hide();
+      }
+    });
+});
+
+$('#send-phone').click(function(){
+	console.log($('#name-phone').val());
+	console.log($('#answer-phone').val());
+
+	$.ajax({
+      type: "GET", //Метод отправки
+      url: "/send-phone.php", //путь до php фаила отправителя
+      data: {
+      	name:$('#name-phone').val(),
+      	phone:$('#answer-phone').val()
+      },
+      success: function() {
+        //код в этом блоке выполняется при успешной отправке сообщения
+        console.log("Ваше сообщение отпрвлено!");
+        $('.phone-form').hide();
+		$('.email-form').hide();
+		$('.vk-form').hide();
+		$('.success-email').hide();
+		$('.success-phone').show();
+		$('.error-form').hide();
+      }
+    });
+});
