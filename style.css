@@ -746,6 +746,27 @@ menu .call .item a{
 }
 
 @media (max-width: 1023px) {
+
+	.popup-wrap .content{
+		width: 100%;
+		min-height: 100vh;
+		border-radius: 0px;
+		padding: 20px;
+		padding-top: 40px;
+	}
+	.popup-wrap .title{
+		font-size: 24px;
+	}
+	
+	.popup-wrap .left{
+		display: block;
+		width: 100%;
+	}
+
+	.popup-wrap .right{
+		display: block;
+		width: 100%;	
+	}
 	.wrap{
 		padding-left: 0px;
 	    padding-right: 0px;
