@@ -47,7 +47,9 @@
 	text-align: center;
 }
 
-
+p{
+	margin-bottom: 15px;
+}
 
 .popup-wrap .left{
 	width: 49%;
