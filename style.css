@@ -28,6 +28,12 @@
 	box-shadow: 0px 2px 3px 0px rgb(0, 0, 0);
 	position: relative;	
 }
+.popup-wrap .content p{
+	margin-bottom: 10px;
+}
+.popup-wrap .content .scroll-wrap{
+	height: 100%;
+}
 
 .popup-wrap .close-button{
 	position: absolute;
@@ -631,8 +637,8 @@ menu .call .item a{
 }
 
 .final .title{
-	padding-top: 50px;
-	margin-bottom: 60px;
+	padding-top: 25px;
+	margin-bottom: 30px;
 	text-align: center;
 	font-size: 36px;
 	font-family: 'Arimo', sans-serif;
@@ -659,11 +665,19 @@ menu .call .item a{
 	background-color: #fff;
 	color:#571617;
 }
+.final .offer{
+	text-align: center;
+    margin-top: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 .final .content{
 	width: 100%;
 	background-color: #fff;
-	padding-bottom: 50px;
+	padding-bottom: 10px;
 	-webkit-box-shadow: 0px 5px 10px 0px #999;
 	box-shadow: 0px 5px 10px 0px #999;	
 	border-radius: 4px;
@@ -715,8 +729,8 @@ menu .call .item a{
 	justify-content: space-around;
 }
 
-.final .contacts{
-
+.final .company{
+	margin-top: 30px;
 }
 
 .final .item a{

@@ -39,6 +39,22 @@ $(".offer .close-button").click(function(){
 	$('.big-wrap').removeClass('blur');
 });
 
+$(".show-popup-pay").click(function(){
+	$('.pay').addClass('flex');
+	$('.big-wrap').addClass('blur');
+});
+
+$(".popup-wrap").click(function(){
+	$('.pay').removeClass('flex');
+	$('.big-wrap').removeClass('blur');
+});
+
+$(".pay .close-button").click(function(){
+	$('.pay').removeClass('flex');
+	$('.big-wrap').removeClass('blur');
+});
+
+
 $(".popup-wrap .content").click(function(e) {
 	e.stopImmediatePropagation();
 });
@@ -126,6 +142,21 @@ $('#send-phone').click(function(){
 		$('.success-email').hide();
 		$('.success-phone').show();
 		$('.error-form').hide();
+      }
+    });
+});
+
+$('#send-pay').click(function(){
+
+	$.ajax({
+      type: "POST", //Метод отправки
+      url: "https://payment.yandex.net/api/v3/payments/1", //путь до php фаила отправителя
+      data: {
+      	500407:'test_FhL1auNG7-b7Vq42X8t_XrNh_rKd0V8sC1fUzml0-80'
+      },
+      success: function() {
+        //код в этом блоке выполняется при успешной отправке сообщения
+        console.log("Ваше сообщение отпрвлено!");
       }
     });
 });
