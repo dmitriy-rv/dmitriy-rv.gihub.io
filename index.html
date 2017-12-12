@@ -25,24 +25,29 @@
 </head>
 <body>
 	<div class="popup-wrap pay">
-		<div class="content" data-mcs-theme="dark">
+		<div class="content">
 			<div class="close-button">
 				X
 			</div>
-			<style>.tinkoffPayRow{display:block;margin:1%;width:160px;}</style>
-			<script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff.js"></script>
-			<form name="TinkoffPayForm" onsubmit="pay(this); return false;">
-				<input class="tinkoffPayRow" type="hidden" name="terminalkey" value="1511828881980DEMO">
-				<input class="tinkoffPayRow" type="hidden" name="frame" value="false">
-				<input class="tinkoffPayRow" type="hidden" name="language" value="ru">
-			    <input class="tinkoffPayRow" type="text" placeholder="Сумма заказа" name="amount" required>
-			    <input class="tinkoffPayRow" type="text" placeholder="Номер заказа" name="order">
-			    <input class="tinkoffPayRow" type="text" placeholder="Описание заказа" name="description">
-			    <input class="tinkoffPayRow" type="text" placeholder="ФИО плательщика" name="name">
-			    <input class="tinkoffPayRow" type="text" placeholder="E-mail" name="email">
-			    <input class="tinkoffPayRow" type="text" placeholder="Контактный телефон" name="phone">
-			    <input class="tinkoffPayRow" type="submit" value="Оплатить">
-			</form>
+			<div class="scroll-wrap"  data-mcs-theme="dark">
+				<div class="title">
+					Введите, пожалуйста, контактные данные. После заполнения вас перенаправит на страницу банка
+				</div>
+				<style>.tinkoffPayRow{display:block;margin:1%;width:160px;}</style>
+				<script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff.js"></script>
+				<form name="TinkoffPayForm" onsubmit="pay(this); return false;">
+					<input class="tinkoffPayRow" type="hidden" name="terminalkey" value="	1511828881980">
+					<input class="tinkoffPayRow" type="hidden" name="frame" value="false">
+					<input class="tinkoffPayRow" type="hidden" name="language" value="ru">
+				    <input class="tinkoffPayRow" type="hidden" placeholder="Сумма заказа" name="amount" value="6000">
+				    <input class="tinkoffPayRow" type="hidden" placeholder="Номер заказа" name="order">
+				    <input id="pay-description" class="tinkoffPayRow" type="hidden" placeholder="Описание заказа" name="description" value="Курс 'Искатель'">
+				    <input class="tinkoffPayRow" type="text" placeholder="ФИО" name="name" required>
+				    <input id="pay-mail" class="tinkoffPayRow" type="text" placeholder="E-mail" name="email" required>
+				    <input class="tinkoffPayRow" type="text" placeholder="Контактный телефон" name="phone" required>
+				    <input class="tinkoffPayRow button" type="submit" value="Оплатить">
+				</form>
+			</div>
 		</div>
 	</div>
 	<div class="popup-wrap feedback">
@@ -50,51 +55,53 @@
 			<div class="close-button">
 				X
 			</div>
-			<div class="title">
-				Выберите удобный способ связи, отправьте контактные данные, и с вами свяжутся в ближайшее время
-			</div>
-			<div class="left">
-				<div class="button phone-click">
-					Телефон
+			<div class="scroll-wrap"  data-mcs-theme="dark">
+				<div class="title">
+					Выберите удобный способ связи, отправьте контактные данные, и с вами свяжутся в ближайшее время
 				</div>
-				<div class="button email-click">
-					E-mail
-				</div>
-				<div class="button vk-click">
-					VK
-				</div>
-			</div>
-			<div class="right">
-				<div class="phone-form">
-					<input name="name" id="name-phone" type="text" placeholder="Ваше имя" autocomplete="on">
-					<input name="phone" id="answer-phone" type="phone" placeholder="Телефон" autocomplete="on">
-					<div class="button" id="send-phone">
-						Отправить
+				<div class="left">
+					<div class="button phone-click">
+						Телефон
+					</div>
+					<div class="button email-click">
+						E-mail
+					</div>
+					<div class="button vk-click">
+						VK
 					</div>
 				</div>
-				<div class="email-form">
-					<input name="name" id="name-email" type="text" placeholder="Ваше имя" autocomplete="on">
-					<input name="email" id="answer-email" type="email" placeholder="Email"  autocomplete="on">
-					<div class="button" id="send-email">
-						Отправить
+				<div class="right">
+					<div class="phone-form">
+						<input name="name" id="name-phone" type="text" placeholder="Ваше имя" autocomplete="on">
+						<input name="phone" id="answer-phone" type="phone" placeholder="Телефон" autocomplete="on">
+						<div class="button" id="send-phone">
+							Отправить
+						</div>
 					</div>
-				</div>
-				<div class="vk-form">
-					Вы можете отправить сообщение по адресу: <a href="https://vk.com/id161150699">
-						vk.com/id161150699
-					</a>
-				</div>
-				<div class="success-email">
-					Спасибо!<br>
-					Скоро мы вам напишем
-				</div>
-				<div class="success-phone">
-					Спасибо!<br>
-					Скоро мы вам позвоним
-				</div>
-				<div class="error-form">
-					Что то пошло не так...<br>
-					Мы уже исправляем ошибку. Пожалуйста, повторите запрос позднее
+					<div class="email-form">
+						<input name="name" id="name-email" type="text" placeholder="Ваше имя" autocomplete="on">
+						<input name="email" id="answer-email" type="email" placeholder="Email"  autocomplete="on">
+						<div class="button" id="send-email">
+							Отправить
+						</div>
+					</div>
+					<div class="vk-form">
+						Вы можете отправить сообщение по адресу: <a href="https://vk.com/id161150699">
+							vk.com/id161150699
+						</a>
+					</div>
+					<div class="success-email">
+						Спасибо!<br>
+						Скоро мы вам напишем
+					</div>
+					<div class="success-phone">
+						Спасибо!<br>
+						Скоро мы вам позвоним
+					</div>
+					<div class="error-form">
+						Что то пошло не так...<br>
+						Мы уже исправляем ошибку. Пожалуйста, повторите запрос позднее
+					</div>
 				</div>
 			</div>
 		</div>
@@ -314,7 +321,7 @@
 				</div>
 				<div class="item"> 
 					<a href="mailto:dimarikrv@gmail.com">
-						dimarikrv@gmail.com
+						avallonis24@gmail.com
 					</a>
 				</div>
 				<div class="item">
@@ -821,7 +828,7 @@
 						</div>
 						<div class="item"> 
 							<a href="mailto:dimarikrv@gmail.com">
-								dimarikrv@gmail.com
+								avallonis24@gmail.com
 							</a>
 						</div>
 						<div class="item">

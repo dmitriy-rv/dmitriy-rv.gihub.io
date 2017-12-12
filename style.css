@@ -46,6 +46,11 @@
 	font-weight: bold;
 }
 
+.popup-wrap.pay form{
+	max-width: 500px;
+	margin: auto;
+}
+
 .popup-wrap .title{
 	font-size: 32px;
 	margin-bottom: 20px;
@@ -74,6 +79,17 @@
 .popup-wrap .success-phone,
 .popup-wrap .error-form{
 	display: none;
+}
+
+.popup-wrap .vk-form,
+.popup-wrap .success-email,
+.popup-wrap .success-phone,
+.popup-wrap .error-form{
+    margin-top: 20px;
+    line-height: 35px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .popup-wrap input{
@@ -173,7 +189,7 @@ menu .name{
 	color:#fff;
     font-size: 32px;
     padding-bottom: 2px;
-    padding-top: 8px;
+    display: inline-block;
 }
 menu .subname{
 	color:#fff;
@@ -627,7 +643,7 @@ menu .call .item a{
 
 .final{
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	background: url('img/contacts.jpg') 0 0 no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -1131,7 +1147,7 @@ menu .name{
 	color:#fff;
     font-size: 32px;
     padding-bottom: 2px;
-    padding-top: 8px;
+    display: inline-block;
 }
 menu .subname{
 	color:#fff;
