@@ -1,8 +1,10 @@
-(function($){
-    $(window).on("load",function(){
-        $(".scroll-wrap").mCustomScrollbar();
-    });
-})(jQuery);
+// (function($){
+//     $(window).on("load",function(){
+//         $(".scroll-wrap").mCustomScrollbar({
+//         	documentTouchScroll: true
+//         });
+//     });
+// })(jQuery);
 
 $(".move").click(function(){
 	var position = $(".utp1").offset().top;

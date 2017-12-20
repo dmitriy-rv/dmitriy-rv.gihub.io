@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109657217-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-109657217-1');
-	</script>
-
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 
@@ -29,12 +19,12 @@
 			<div class="close-button">
 				X
 			</div>
-			<div class="scroll-wrap"  data-mcs-theme="dark">
+			<div class="scroll-wrap"  style="overflow:auto;">
 				<div class="title">
 					Введите, пожалуйста, контактные данные. После заполнения вас перенаправит на страницу банка
 				</div>
 				<style>.tinkoffPayRow{display:block;margin:1%;width:160px;}</style>
-				<script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff.js"></script>
+
 				<form name="TinkoffPayForm" onsubmit="pay(this); return false;">
 					<input class="tinkoffPayRow" type="hidden" name="terminalkey" value="	1511828881980">
 					<input class="tinkoffPayRow" type="hidden" name="frame" value="false">
@@ -51,11 +41,11 @@
 		</div>
 	</div>
 	<div class="popup-wrap feedback">
-		<div class="content" data-mcs-theme="dark">
+		<div class="content">
 			<div class="close-button">
 				X
 			</div>
-			<div class="scroll-wrap"  data-mcs-theme="dark">
+			<div class="scroll-wrap" style="overflow:auto;">
 				<div class="title">
 					Выберите удобный способ связи, отправьте контактные данные, и с вами свяжутся в ближайшее время
 				</div>
@@ -111,7 +101,8 @@
 			<div class="close-button">
 				X
 			</div>
-			<div class="scroll-wrap"  data-mcs-theme="dark">
+			<div class="scroll-wrap"  data-mcs-theme="dark"
+			style="overflow:auto;">
 				<div class="title">
 					ПУБЛИЧНАЯ ОФЕРТА
 				</div>
@@ -315,12 +306,12 @@
 			</div>
 			<div class="call">
 				<div class="item"> 
-					<a href="tel:+1234567890">
-						+7 951 846 09 35
+					<a href="tel:+79992195610">
+						+7 999 219 56 10
 					</a>
 				</div>
 				<div class="item"> 
-					<a href="mailto:dimarikrv@gmail.com">
+					<a href="mailto:avallonis24@gmail.com">
 						avallonis24@gmail.com
 					</a>
 				</div>
@@ -713,7 +704,7 @@
 						Есть ли гарантии?
 					</div>
 					<div class="text">
-						Это официальная организация, зарегистрированная в гос. органах. Работаем на основании публичной оферты, с которой можно ознакомиться здесь. После всех денежных операций вы будете получать чеки. Любые вопросы и трудности будут обязательно рассмотрены и решены. 
+						Это официальная организация, зарегистрированная в гос. органах. Работаем на основании публичной оферты, с которой можно ознакомиться <span class="show-popup-offer">здесь</span>>. После всех денежных операций вы будете получать чеки. Любые вопросы и трудности будут обязательно рассмотрены и решены. 
 					</div>
 				</div>
 			</div>
@@ -813,7 +804,7 @@
 				</div>
 				<div class="offer">
 					<span class="show-popup-offer">
-						Пользовательское соглашение
+						Публичная оферта
 					</span>
 				</div>
 				<div class="contacts">
@@ -822,12 +813,12 @@
 					</div>
 					<div class="flex-wrap">
 						<div class="item"> 
-							<a href="tel:+1234567890">
-								+7 951 846 09 35
+							<a href="tel:+79992195610">
+								+7 999 219 56 10
 							</a>
 						</div>
 						<div class="item"> 
-							<a href="mailto:dimarikrv@gmail.com">
+							<a href="mailto:avallonis24@gmail.com">
 								avallonis24@gmail.com
 							</a>
 						</div>
@@ -853,8 +844,49 @@
 		</div>
 	</div>
 	</div>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109657217-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-109657217-1');
+	</script>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+	    (function (d, w, c) {
+	        (w[c] = w[c] || []).push(function() {
+	            try {
+	                w.yaCounter47028936 = new Ya.Metrika({
+	                    id:47028936,
+	                    clickmap:true,
+	                    trackLinks:true,
+	                    accurateTrackBounce:true,
+	                    webvisor:true
+	                });
+	            } catch(e) { }
+	        });
+
+	        var n = d.getElementsByTagName("script")[0],
+	            s = d.createElement("script"),
+	            f = function () { n.parentNode.insertBefore(s, n); };
+	        s.type = "text/javascript";
+	        s.async = true;
+	        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+	        if (w.opera == "[object Opera]") {
+	            d.addEventListener("DOMContentLoaded", f, false);
+	        } else { f(); }
+	    })(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/47028936" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/jquery.mCustomScrollbar.js"></script>
+	<script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
