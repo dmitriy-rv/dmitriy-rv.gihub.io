@@ -7,6 +7,66 @@
 		box-sizing: border-box;	
 }
 
+.popup-wrap{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.7);
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.popup-wrap .content{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 0px;
+  -webkit-box-shadow: 0px 2px 3px 0px rgb(0, 0, 0);
+  box-shadow: 0px 2px 3px 0px rgb(0, 0, 0);
+  position: relative; 
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+}
+.popup-wrap .content p{
+  margin-bottom: 10px;
+}
+.popup-wrap .content .scroll-wrap{
+  height: 100%;
+  overflow:auto;
+}
+
+.popup-wrap .close-button{
+  position: absolute;
+  cursor: pointer;
+  font-size: 20px;
+  color:#571617;
+  top: 20px;
+  right: 20px;
+  z-index: 20;
+  font-weight: bold;
+}
+
+.popup-wrap .title{
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-family: 'Arimo', sans-serif;
+  text-align: center;
+}
+
+.flex{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;  
+}
+
 .main_logo{
 	position: absolute;
 	z-index: 10;
@@ -132,6 +192,7 @@
 
 .front .button{
 	display: inline-block;
+  text-decoration: none;
     height: 50px;
     border: 1px solid #571617;
     border-radius: 5px;
@@ -276,6 +337,8 @@
 }
 
 .first_lesson .button{
+  display: block;
+  text-decoration: none;
     height: 50px;
     border: 1px solid #571617;
     border-radius: 5px;
@@ -330,6 +393,22 @@
   font-weight: bold;
 }
 
+.full_course .wrap#block-4-1{
+  transform: translateX(-100%);
+  will-change: transform;
+}
+
+.full_course .wrap#block-4-2{
+  transform: translateX(100%);
+  will-change: transform;
+}
+
+.full_course .wrap.show{
+  -webkit-transform: none;
+  transform: none;
+  transition: transform 300ms linear;
+}
+
 .full_course .block{
     margin-left: 20px;
     margin-right: 20px;
@@ -337,6 +416,12 @@
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0px 2px 3px 1px #571617a1;
+}
+
+.full_course .wrap.show .item{
+  -webkit-transform: none;
+  transform: none;
+  transition: transform 300ms linear 350ms;
 }
 
 .full_course .block img{
@@ -400,6 +485,16 @@
 
 }
 
+.who_are .title{
+  font-family: 'Arimo', sans-serif;
+  text-align: center;
+  font-size: 28px;
+  margin-top: 30px;
+  margin-bottom: 21px;
+  color: #571617;
+  font-weight: bold;
+}
+
 .who_are .foto{
 	background-image: url(img/me.jpg);
 	-webkit-background-size: 100%;
@@ -413,7 +508,7 @@
 	height: 270px;
 }
 
-.who_are .text .title{
+.who_are .text .name{
   font-family: 'Arimo', sans-serif;
     text-align: center;
     font-size: 22px;
@@ -430,6 +525,42 @@
 .who_are .text li{
   margin-bottom: 15px;
   line-height: 1.2;
+}
+
+.who_are .button_wrap{
+  display: flex;
+}
+
+.who_are .button{
+  display: block;
+  text-decoration: none;
+  height: 50px;
+  border: 1px solid #571617;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  text-transform: uppercase;
+  transition: 0.4s;
+  cursor: pointer;
+  letter-spacing: 3px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  background-color: #571617;
+  color: #fff;
+  bottom: 70px;
+  margin-left: 20px;
+  margin-right: 20px;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 4px 4px -1px #79797996;
+  transition: 200ms;
+  width: 100%;
+}
+
+.who_are .button:hover,
+.who_are .button:active{
+  background-color: #fff;
+  color:#571617;
 }
 
 .how{
@@ -475,6 +606,8 @@
 }
 
 .how .button{
+  display: block;
+  text-decoration: none;
     height: 50px;
     border: 1px solid #571617;
     border-radius: 5px;
@@ -542,6 +675,18 @@
   padding-top: 40px;
 }
 
+.price .title{
+  text-align: center;
+  font-size: 30px;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Arimo', sans-serif;
+  color:#fff;
+  text-shadow: 0px 1px 1px #000;
+  margin-bottom: 25px;
+}
+
 .price .table{
   background-color: #fff;
   margin-left: 40px;
@@ -551,14 +696,21 @@
   box-shadow: 0px 2px 3px 1px #571617a1;
 }
 
-.price .table div{
+.price .table a{
+  text-decoration: none;
+  display: block;
+}
+
+.price .table div,
+.price .table a{
   border-bottom: 1px solid #571617;
   padding: 15px;
   text-align: center;
   font-size: 22px;
 }
 
-.price .table div:last-child{
+.price .table div:last-child,
+.price .table a{
   border-bottom: 0px;
   background-color: #571617;
   color:#fff;
@@ -571,6 +723,7 @@
     margin-left: 10px;
     margin-right: 10px;
     padding-bottom: 30px;
+    padding-top: 1px;
 }
 
 .form .title{
@@ -764,11 +917,20 @@
 .contacts .content li{
     list-style-type: none;
     font-family: 'Arimo', sans-serif;
-    text-transform: uppercase;
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 25px;
     text-align: center;
+}
+
+.contacts .content li a,
+.contacts .content li a:active,
+.contacts .content li a:visited{
+  color: #000;
+}
+
+.contacts .content li .show-popup-offer{
+  text-decoration: underline;
 }
 
 /*.for_me .wrap{

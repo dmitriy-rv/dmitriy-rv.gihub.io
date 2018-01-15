@@ -28,6 +28,21 @@
 $( document ).ready(function() {
     $('.front').addClass('showFront');
     $('.main_logo').addClass('showFront');
+
+    $(document).on("click",".toJoin", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
+
+        //забираем идентификатор бока с атрибута href
+        var id  = $(this).attr('href'),
+ 
+        //узнаем высоту от начала страницы до блока на который ссылается якорь
+        top = $(id).offset().top;
+         
+        //анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({scrollTop: top}, 2000);
+    });
+
 });
 
 $(window).scroll(function() {
@@ -50,4 +65,20 @@ $(window).scroll(function() {
 	if ($('#who_are_foto').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
 		$('#who_are_foto').addClass('show');
 	}
+
+	if ($('#block-4-1').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
+		$('#block-4-1').addClass('show');
+	}
+	
+	if ($('#block-4-2').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
+		$('#block-4-2').addClass('show');
+	}
+});
+
+$(".show-popup-offer").click(function(){
+	$('.offer').addClass('flex');
+});
+
+$(".offer .close-button").click(function(){
+	$('.offer').removeClass('flex');
 });
