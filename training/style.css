@@ -69,7 +69,9 @@
 	height: 100vh;
 	overflow: hidden;
 	position: relative;
-	background-image: url(img/front.jpg);
+	background-image: url(img/front-mob-sm.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
 .front .blur_img{
@@ -209,8 +211,7 @@
 }
 
 .first_lesson{
-	/*background-image: url(img/card-mobile.jpg);*/
-	background-image: url(img/img-3.jpeg);
+	background-image: url(img/block-3-mob-sm.jpg);
 	background-position: bottom;
 	background-position-x: center;
 	background-size: cover; 
@@ -237,7 +238,7 @@
     background-color: #fff;
     margin-bottom: 20px;
     border-radius: 6px;
-    height: 110px;
+    height: 120px;
     overflow: hidden;
     display: flex;
     box-shadow: 0px 2px 3px 1px #571617a1;
@@ -340,7 +341,7 @@
 
 .full_course .block img{
     width: 100%;
-    height: 150px;
+    height: 200px;
 
 }
 
@@ -367,7 +368,9 @@
 
 .better{
   width: 100%;
-  background-image: url(img/test-5-1.jpg);
+  background-image: url(img/block-5-mobile-sm.jpg);
+  -webkit-background-size: 100%;
+  background-size: 100%;
   padding-top: 5px;
   padding-bottom: 5px;
   color: white;
@@ -380,7 +383,7 @@
     margin-top: 30px;
     margin-bottom: 30px;
     font-weight: bold;
-    color: #571617;
+    color: #fff;
 }
 
 .better ul {
@@ -399,13 +402,15 @@
 
 .who_are .foto{
 	background-image: url(img/me.jpg);
+	-webkit-background-size: 100%;
+	background-size: 100%;
 	width: 100%;
-	height: 273px;
+	height: 270px;
 }
 .who_are .foto.show{
 	background-image: url(img/me.jpg);
 	width: 100%;
-	height: 273px;
+	height: 270px;
 }
 
 .who_are .text .title{
@@ -428,7 +433,7 @@
 }
 
 .how{
-  background-image: url(img/test-5-1.jpg);
+  background-image: url(img/block-7.jpg);
   padding-top: 5px;
   padding-bottom: 40px;
   color: white;
@@ -530,7 +535,9 @@
 }
 
 .price{
-  background-image: url(img/test-5-1.jpg);
+  background-image: url(img/price-mobile-sm.jpg);
+  -webkit-background-size: 100%;
+  background-size: 100%;
   padding-bottom: 20px;
   padding-top: 40px;
 }
@@ -560,6 +567,49 @@
   font-size: 18px;
 }
 
+.form{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 30px;
+}
+
+.form .title{
+	font-family: 'Arimo', sans-serif;
+  	text-align: center;
+  	font-size: 32px;
+  	margin-top: 30px;
+  	margin-bottom: 20px;
+  	font-weight: bold;
+  	color: #571617;
+}
+
+.form .button{
+    height: 50px;
+    border: 1px solid #571617;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+    transition: 0.4s;
+    cursor: pointer;  
+    letter-spacing: 3px;
+    margin-top: 30px;
+    background-color: #571617;
+    color:#fff;
+    bottom: 70px;
+    margin-left: 40px;
+    margin-right: 40px;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 4px 4px -1px #79797996;
+    transition: 200ms;
+}
+
+.form .button:hover,
+.form .button:active{
+  background-color: #fff;
+  color:#571617;
+}
 
 .input {
   position: relative;
@@ -611,7 +661,7 @@
 .input__label-content {
   position: relative;
   display: block;
-  padding: 1.6em 0;
+  padding: 28px 0;
   width: 100%;
 }
 
@@ -628,22 +678,22 @@
 }
 
 .input__field--nao {
-  padding: 0.5em 0em 0.25em;
+  padding: 5px 0px 10px;
   width: 100%;
   background: transparent;
   color: #9da8b2;
-  font-size: 1.25em;
+  font-size: 20px;
 }
 
 .input__label--nao {
   position: absolute;
-  top: 0.95em;
-  font-size: 0.85em;
+  top: 0px;
+  font-size: 14px;
   left: 0;
   display: block;
   width: 100%;
   text-align: left;
-  padding: 0em;
+  padding: 0px;
   pointer-events: none;
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
@@ -674,6 +724,51 @@
   stroke: #333;
   -webkit-transform: translate3d(-66.6%, 0, 0);
   transform: translate3d(-66.6%, 0, 0);
+}
+
+
+.contacts{
+	background-image: url(img/final.jpg);
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	padding: 50px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.contacts .content{
+	background-color:white;
+	border-radius: 5px;
+  	box-shadow: 0px 2px 3px 1px #571617a1;
+  	padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-top: 1px;
+}
+
+.contacts .content .title{
+	font-family: 'Arimo', sans-serif;
+  	text-align: center;
+  	font-size: 32px;
+  	margin-top: 30px;
+  	margin-bottom: 20px;
+  	font-weight: bold;
+  	color: #571617;	
+}
+
+.contacts .content ul{
+	padding-left: 0;
+	padding-top: 25px;
+}
+
+.contacts .content li{
+    list-style-type: none;
+    font-family: 'Arimo', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 /*.for_me .wrap{
