@@ -368,7 +368,7 @@
 
 
 .full_course{
-  
+  overflow: hidden;
 }
 
 .full_course .title{
@@ -403,7 +403,8 @@
   will-change: transform;
 }
 
-.full_course .wrap.show{
+.full_course .wrap.show#block-4-1,
+.full_course .wrap.show#block-4-2{
   -webkit-transform: none;
   transform: none;
   transition: transform 300ms linear;
@@ -416,9 +417,10 @@
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0px 2px 3px 1px #571617a1;
+    transform: scale(0.8);
 }
 
-.full_course .wrap.show .item{
+.full_course .wrap.show .block{
   -webkit-transform: none;
   transform: none;
   transition: transform 300ms linear 350ms;
@@ -482,7 +484,7 @@
 }
 
 .who_are{
-
+	overflow: hidden;
 }
 
 .who_are .title{
@@ -501,11 +503,49 @@
 	background-size: 100%;
 	width: 100%;
 	height: 270px;
+	transform: scale(0.8);
+	border-radius: 10px;
+	box-shadow: -2px 7px 9px 2px #aaa;
 }
-.who_are .foto.show{
-	background-image: url(img/me.jpg);
-	width: 100%;
-	height: 270px;
+
+.who_are .wrap.show .foto{
+  -webkit-transform: none;
+  transform: none;
+  border-radius: 0px;
+  transition: 300ms linear 300ms;
+  box-shadow: 0px 0px 0px 0px #fff;
+}
+
+.who_are .wrap#who_are_foto{
+	transform: translateX(-100%);
+}
+.who_are .wrap.show#who_are_foto{
+  -webkit-transform: none;
+  transform: none;
+  transition: transform 300ms linear;
+}
+
+.who_are .text{
+	transform: scale(0.8);
+	border-radius: 10px;
+	box-shadow: -2px 7px 9px 2px #aaa;
+}
+
+.who_are .wrap.show .text{
+  -webkit-transform: none;
+  transform: none;
+  border-radius: 0px;
+  transition: 300ms linear 300ms;
+  box-shadow: 0px 0px 0px 0px #fff;
+}
+
+.who_are .wrap#who_are_text{
+	transform: translateX(100%);
+}
+.who_are .wrap.show#who_are_text{
+  -webkit-transform: none;
+  transform: none;
+  transition: transform 300ms linear;
 }
 
 .who_are .text .name{
@@ -567,7 +607,6 @@
   background-image: url(img/block-7.jpg);
   padding-top: 5px;
   padding-bottom: 40px;
-  color: white;
 }
 
 .how .title{
@@ -577,7 +616,7 @@
     margin-top: 30px;
     margin-bottom: 30px;
     font-weight: bold;
-    color: #fff;
+    color: #571617;
 }
 
 .how .wrap{
@@ -589,6 +628,7 @@
   width: 160px;
   text-align: center;
   display: inline-block;
+  color: #571617;
 }
 .how .wrap.left{
   text-align: left;
@@ -675,6 +715,7 @@
   padding-top: 40px;
 }
 
+
 .price .title{
   text-align: center;
   font-size: 30px;
@@ -694,6 +735,15 @@
   margin-bottom: 30px;
   border-radius: 5px;
   box-shadow: 0px 2px 3px 1px #571617a1;
+    opacity: 0;
+  transform: scale(0.5);
+}
+
+.price .table.show{
+	-webkit-transform: none;
+  transform: none;
+  opacity: 1;
+  transition: 300ms linear;
 }
 
 .price .table a{

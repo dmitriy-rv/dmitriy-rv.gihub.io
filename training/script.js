@@ -62,7 +62,12 @@ $(window).scroll(function() {
 		$('#list-3_5').addClass('show');
 	}
 
-	if ($('#who_are_foto').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
+	// if ($('#who_are_foto').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
+	// 	$('#who_are_foto').addClass('show');
+	// }
+
+	if ($('#who_are_text').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
+		$('#who_are_text').addClass('show');
 		$('#who_are_foto').addClass('show');
 	}
 
@@ -72,6 +77,14 @@ $(window).scroll(function() {
 	
 	if ($('#block-4-2').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
 		$('#block-4-2').addClass('show');
+	}
+
+	if ($('#price-1').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
+		$('#price-1').addClass('show');
+	}
+
+	if ($('#price-2').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
+		$('#price-2').addClass('show');
 	}
 });
 
