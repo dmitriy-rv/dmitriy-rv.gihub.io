@@ -95,3 +95,48 @@ $(".show-popup-offer").click(function(){
 $(".offer .close-button").click(function(){
 	$('.offer').removeClass('flex');
 });
+
+$(".show-popup-pay").click(function(){
+	$('.pay').addClass('flex');
+});
+
+$(".pay .close-button").click(function(){
+	$('.pay').removeClass('flex');
+});
+
+
+$('#send-sing_up').click(function(){
+	console.log($('#name-sing_up').val());
+	console.log($('#phone-sing_up').val());
+	console.log($('#email-sing_up').val());
+
+	$.ajax({
+      type: "GET", //Метод отправки
+      url: "/send-sing_up.php", //путь до php фаила отправителя
+      data: {
+      	name:$('#name-sing_up').val(),
+      	phone:$('#phone-sing_up').val(),
+      	email:$('#email-sing_up').val()
+      },
+      success: function() {
+        //код в этом блоке выполняется при успешной отправке сообщения
+        console.log("Ваше сообщение отпрвлено!");
+      }
+    });
+});
+
+
+$('#send-pay').click(function(){
+
+	$.ajax({
+      type: "POST", //Метод отправки
+      url: "https://payment.yandex.net/api/v3/payments/1", //путь до php фаила отправителя
+      data: {
+      	500407:'test_FhL1auNG7-b7Vq42X8t_XrNh_rKd0V8sC1fUzml0-80'
+      },
+      success: function() {
+        //код в этом блоке выполняется при успешной отправке сообщения
+        console.log("Ваше сообщение отпрвлено!");
+      }
+    });
+});

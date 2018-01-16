@@ -14,6 +14,32 @@
 	<link rel="apple-touch-icon" href="favi.png"/>
 </head>
 <body>
+	<div class="popup-wrap pay">
+		<div class="content">
+			<div class="close-button">
+				X
+			</div>
+			<div class="scroll-wrap"  style="overflow:auto;">
+				<div class="title">
+					Введите, пожалуйста, контактные данные. После заполнения вас перенаправит на страницу банка
+				</div>
+				<style>.tinkoffPayRow{display:block;margin:1%;width:160px;}</style>
+
+				<form name="TinkoffPayForm" onsubmit="pay(this); return false;">
+					<input class="tinkoffPayRow" type="hidden" name="terminalkey" value="	1511828881980">
+					<input class="tinkoffPayRow" type="hidden" name="frame" value="false">
+					<input class="tinkoffPayRow" type="hidden" name="language" value="ru">
+				    <input class="tinkoffPayRow" type="hidden" placeholder="Сумма заказа" name="amount" value="6000">
+				    <input class="tinkoffPayRow" type="hidden" placeholder="Номер заказа" name="order">
+				    <input id="pay-description" class="tinkoffPayRow" type="hidden" placeholder="Описание заказа" name="description" value="Курс 'Искатель'">
+				    <input class="tinkoffPayRow" type="text" placeholder="ФИО" name="name" required>
+				    <input id="pay-mail" class="tinkoffPayRow" type="text" placeholder="E-mail" name="email" required>
+				    <input class="tinkoffPayRow" type="text" placeholder="Контактный телефон" name="phone" required>
+				    <input class="tinkoffPayRow button" type="submit" value="Оплатить">
+				</form>
+			</div>
+		</div>
+	</div>
 
 	<div class="popup-wrap offer">
 		<div class="content">
@@ -387,9 +413,11 @@
 			<a href="https://vk.com/id161150699" target="_blank" class="button">
 				Я в ВК
 			</a>
-			<div class="button">
-				Диплом
-			</div>
+			<a data-fancybox="gallery" href="img/front-mob-sm.jpg">
+				<div class="button">
+					Диплом
+				</div>
+			</a>
 		</div>
 	</div>
 	<div class="how">
@@ -496,7 +524,7 @@
 			<div>
 				6000 р
 			</div>
-			<div class="button">
+			<div class="button show-popup-pay">
 				Купить
 			</div>
 		</div>
@@ -506,8 +534,8 @@
 			Записывайтесь на бесплатное занятие
 		</div>
 		<span class="input input--nao">
-			<input class="input__field input__field--nao" type="text" id="input-1" />
-			<label class="input__label input__label--nao" for="input-1">
+			<input class="input__field input__field--nao" type="text" id="name-sing_up" required/>
+			<label class="input__label input__label--nao" for="name-sing_up">
 				<span class="input__label-content input__label-content--nao">Ваше имя*</span>
 			</label>
 			<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
@@ -515,8 +543,8 @@
 			</svg>
 		</span>
 		<span class="input input--nao">
-			<input class="input__field input__field--nao" type="phone" id="input-1" />
-			<label class="input__label input__label--nao" for="input-1">
+			<input class="input__field input__field--nao" type="phone" id="phone-sing_up" required/>
+			<label class="input__label input__label--nao" for="phone-sing_up">
 				<span class="input__label-content input__label-content--nao">Телефон*</span>
 			</label>
 			<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
@@ -524,8 +552,8 @@
 			</svg>
 		</span>
 		<span class="input input--nao">
-			<input class="input__field input__field--nao" type="email" id="input-1" />
-			<label class="input__label input__label--nao" for="input-1">
+			<input class="input__field input__field--nao" type="email" id="email-sing_up" required/>
+			<label class="input__label input__label--nao" for="email-sing_up">
 				<span class="input__label-content input__label-content--nao">E-mail*</span>
 			</label>
 			<svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
@@ -533,7 +561,7 @@
 			</svg>
 		</span>
 
-		<div class="button">
+		<div class="button" id="send-sing_up">
 			Записаться
 		</div>
 	</div>
@@ -575,7 +603,15 @@
 			</ul>
 		</div>
 	</div>
+
+
 	<script src="jquery-3.2.1.min.js"></script>
+	<script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff.js"></script>
+
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+	
 	<script src="script.js"></script>
 	<script src="classie.js"></script>
 		<script>

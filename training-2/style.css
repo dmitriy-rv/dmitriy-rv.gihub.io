@@ -7,117 +7,76 @@
 		box-sizing: border-box;	
 }
 
-.input {
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-  margin: 1em;
-  max-width: 350px;
-  width: calc(100% - 2em);
-  vertical-align: top;
-}
 
-.input__field {
-  position: relative;
-  display: block;
-  float: right;
-  padding: 0.8em;
-  width: 60%;
-  border: none;
-  border-radius: 0;
-  background: #f0f0f0;
-  color: #aaa;
-  font-weight: 400;
-  font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-appearance: none; /* for box shadows to show on iOS */
-}
-
-.input__field:focus {
-  outline: none;
-}
-
-.input__label {
-  display: inline-block;
-  float: right;
-  padding: 0 1em;
-  width: 40%;
-  color: #696969;
-  font-weight: bold;
-  font-size: 70.25%;
-  -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.input__label-content {
-  position: relative;
-  display: block;
-  padding: 1.6em 0;
-  width: 100%;
-}
-
-.graphic {
-  position: absolute;
-  top: 0;
-  left: 0;
-  fill: none;
-}
-
-.input--nao {
+.select-field{
   overflow: hidden;
-  padding-top: 1em;
+  width: 300px;
 }
 
-.input__field--nao {
-  padding: 0.5em 0em 0.25em;
-  width: 100%;
-  background: transparent;
-  color: #9da8b2;
-  font-size: 1.25em;
+.select-field .field{
+  padding: 10px;
+  font-size: 23px;
+  border-bottom:1px solid black;
+  
 }
 
-.input__label--nao {
+.select-field ul{
+    display: inline;
+    padding: 0;
+    position: relative;
+}
+
+.select-field li{
+  transform: translateX(100%);
+  list-style: none;
+    padding: 10px;
+  font-size: 18px;
+  border-bottom:1px solid black;
+  background-color: #fff;
   position: absolute;
-  top: 0.95em;
-  font-size: 0.85em;
-  left: 0;
-  display: block;
-  width: 100%;
-  text-align: left;
-  padding: 0em;
-  pointer-events: none;
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-  -webkit-transition: -webkit-transform 0.2s 0.15s, color 1s;
-  transition: transform 0.2s 0.15s, color 1s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
 }
 
-.graphic--nao {
-  stroke: #92989e;
-  pointer-events: none;
-  -webkit-transition: -webkit-transform 0.7s, stroke 0.7s;
-  transition: transform 0.7s, stroke 0.7s;
-  -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
-  transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
-} 
-
-.input__field--nao:focus + .input__label--nao,
-.input--filled .input__label--nao {
-  color: #333;
-  -webkit-transform: translate3d(0, -1.25em, 0) scale3d(0.75, 0.75, 1);
-  transform: translate3d(0, -1.25em, 0) scale3d(0.75, 0.75, 1);
+.select-field li.active{
+  color:red;
 }
 
-.input__field--nao:focus ~ .graphic--nao,
-.input--filled .graphic--nao {
-  stroke: #333;
-  -webkit-transform: translate3d(-66.6%, 0, 0);
-  transform: translate3d(-66.6%, 0, 0);
+.select-field ul.show li:first-child{
+  -webkit-transform: none;
+  transform: none;
+  transition: transform 200ms linear;
+}
+
+.select-field ul.show li:nth-child(2){
+  -webkit-transform: none;
+  transform: none;
+  transition: transform 200ms linear 100ms;
+}
+
+.select-field ul.show li:nth-child(3){
+  -webkit-transform: none;
+  transform: none;
+  transition: transform 200ms linear 200ms;
+}
+
+.select-field ul.show li:nth-child(4){
+  -webkit-transform: none;
+  transform: none;
+  transition: transform 200ms linear 300ms;
+}
+
+.select-field ul li:nth-child(4){
+
+  transition: transform 200ms linear;
+}
+
+.select-field ul li:nth-child(3){
+  transition: transform 200ms linear 100ms;
+}
+
+.select-field ul li:nth-child(2){
+  transition: transform 200ms linear 200ms;
+}
+
+.select-field ul li:first-child{
+  transition: transform 200ms linear 300ms;
 }
