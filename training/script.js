@@ -34,13 +34,19 @@ $(window).scroll(function() {
 	if ($('#list-3_5').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
 		$('#list-3_5').addClass('show');
 	}
-
+	if ($('#button_first').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
+		$('#button_first').addClass('show');
+	}
 	if ($('#who_are_foto').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
 		$('#who_are_foto').addClass('show');
 	}
 
 	if ($('#who_are_text').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
 		$('#who_are_text').addClass('show');
+	}
+
+		if ($('#button_how').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
+		$('#button_how').addClass('show');
 	}
 
 	if ($('#block-4-1').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
