@@ -1,30 +1,3 @@
-// $('.first').click(function(){
-// 	console.log('click');
-// 	$('.left').addClass('show');
-// 	$('.right').addClass('show');
-// 	$('.text').addClass('showText');
-// 	$('.text2').addClass('showText2');
-// 	$('img').addClass('showImg');
-// });
-
-// $('.second').click(function(){
-// 	console.log('click');
-// 	$('.move').addClass('show');
-// });
-
-// $('.for_me').click(function(){
-// 	$('.wrap').addClass('wrap_for_me');
-// 	$('.content').addClass('content_for_me');
-// });
-
-// $(window).scroll(function() {
-// 	console.log($('.for_me').height());
-// 	if ($('.for_me').offset().top - $(window).scrollTop() -$('.for_me').height()*0.6 < 0){
-// 		$('.wrap').addClass('wrap_for_me');
-// 		$('.content').addClass('content_for_me');
-// 	}
-// });
-
 $( document ).ready(function() {
     $('.front').addClass('showFront');
     $('.main_logo').addClass('showFront');
@@ -62,13 +35,12 @@ $(window).scroll(function() {
 		$('#list-3_5').addClass('show');
 	}
 
-	// if ($('#who_are_foto').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
-	// 	$('#who_are_foto').addClass('show');
-	// }
+	if ($('#who_are_foto').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
+		$('#who_are_foto').addClass('show');
+	}
 
 	if ($('#who_are_text').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
 		$('#who_are_text').addClass('show');
-		$('#who_are_foto').addClass('show');
 	}
 
 	if ($('#block-4-1').offset().top+100 - $(window).height() - $(window).scrollTop() < 0){
@@ -117,22 +89,6 @@ $('#send-sing_up').click(function(){
       	name:$('#name-sing_up').val(),
       	phone:$('#phone-sing_up').val(),
       	email:$('#email-sing_up').val()
-      },
-      success: function() {
-        //код в этом блоке выполняется при успешной отправке сообщения
-        console.log("Ваше сообщение отпрвлено!");
-      }
-    });
-});
-
-
-$('#send-pay').click(function(){
-
-	$.ajax({
-      type: "POST", //Метод отправки
-      url: "https://payment.yandex.net/api/v3/payments/1", //путь до php фаила отправителя
-      data: {
-      	500407:'test_FhL1auNG7-b7Vq42X8t_XrNh_rKd0V8sC1fUzml0-80'
       },
       success: function() {
         //код в этом блоке выполняется при успешной отправке сообщения

@@ -123,7 +123,7 @@
 	-webkit-transform: none;
   	transform: none;
   	opacity: 1;
-  	transition: opacity 550ms linear 1800ms;
+  	transition: opacity 1000ms linear 2000ms;
 }
 .main_logo .logo{
 	display: -webkit-flex;
@@ -131,7 +131,7 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	width: 325px;
+	width: 300px;
 }
 
 .main_logo img{
@@ -176,19 +176,6 @@
 	background-repeat: no-repeat;
 }
 
-.front .blur_img{
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	background-image: url(img/front_blur.jpg);
-  will-change:opacity;
-}
-
-.front.showFront .blur_img{
-	opacity: 1;
-  	transition: opacity 300ms linear 300ms;
-}
-
 .front .title{
 	position: absolute;
 	text-align: center;
@@ -200,7 +187,7 @@
 	padding-right: 20px;
 	font-family: 'Arimo', sans-serif;
 	color:#fff;
-	text-shadow: 0px 1px 1px #000;
+	text-shadow: 0px 1px 6px #000;
 	transform: translateY(500%);
   will-change: transform;
 }
@@ -208,7 +195,7 @@
 .front.showFront .title{
 	-webkit-transform: none;
   	transform: none;
-  	transition: transform 550ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 600ms;
+  	transition: transform 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 600ms;
 }
 
 .front .subtitle{
@@ -221,7 +208,7 @@
 	padding-left: 20px;
 	padding-right: 20px;
 		color:#fff;
-	text-shadow: 0px 1px 1px #000;
+	text-shadow: 0px 1px 6px #000;
 	transform: translateY(500%);
   will-change: transform;
 }
@@ -229,7 +216,7 @@
 .front.showFront .subtitle{
 	-webkit-transform: none;
   	transform: none;
-  	transition: transform 550ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 1200ms;	
+  	transition: transform 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 1225ms;	
 }
 
 .front .button{
@@ -268,7 +255,7 @@
 .front.showFront .button{
 	-webkit-transform: none;
   	transform: none;
-  	transition: transform 550ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 1800ms;	
+  	transition: transform 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 1850ms;	
 }
 
 .for_me{
@@ -332,7 +319,7 @@
     color: #fff;
     font-weight: bold;
     padding-top: 50px;
-    text-shadow: 0px 1px 1px #000;
+    text-shadow: 0px 1px 6px #000;
 }
 
 .first_lesson .item{
@@ -351,7 +338,7 @@
 .first_lesson .wrap.show .item{
   -webkit-transform: none;
   transform: none;
-  transition: transform 300ms linear 350ms;
+  transition: transform 600ms linear 300ms;
 }
 
 .first_lesson .wrap{
@@ -362,7 +349,7 @@
 .first_lesson .wrap.show {
   -webkit-transform: none;
   transform: none;
-  transition: transform 300ms linear;
+  transition: transform 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .first_lesson .item img{
@@ -449,7 +436,7 @@
 .full_course .wrap.show#block-4-2{
   -webkit-transform: none;
   transform: none;
-  transition: transform 300ms linear;
+  transition: transform 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .full_course .block{
@@ -465,13 +452,11 @@
 .full_course .wrap.show .block{
   -webkit-transform: none;
   transform: none;
-  transition: transform 300ms linear 350ms;
+  transition: transform 600ms linear 300ms;
 }
 
 .full_course .block img{
     width: 100%;
-    height: 200px;
-
 }
 
 .full_course .block .title{
@@ -503,6 +488,7 @@
   padding-top: 5px;
   padding-bottom: 5px;
   color: white;
+  text-shadow: 0px 1px 1px #000;
 }
 
 .better .title{
@@ -540,11 +526,7 @@
 }
 
 .who_are .foto{
-	background-image: url(img/me.jpg);
-	-webkit-background-size: 100%;
-	background-size: 100%;
 	width: 100%;
-	height: 270px;
 	transform: scale(0.8);
 	border-radius: 10px;
 	box-shadow: -2px 7px 9px 2px #aaa;
@@ -554,7 +536,7 @@
   -webkit-transform: none;
   transform: none;
   border-radius: 0px;
-  transition: 300ms linear 300ms;
+  transition: 600ms linear 300ms;
   box-shadow: 0px 0px 0px 0px #fff;
 }
 
@@ -564,7 +546,7 @@
 .who_are .wrap.show#who_are_foto{
   -webkit-transform: none;
   transform: none;
-  transition: transform 300ms linear;
+  transition: transform 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .who_are .text{
@@ -577,7 +559,7 @@
   -webkit-transform: none;
   transform: none;
   border-radius: 0px;
-  transition: 300ms linear 300ms;
+  transition: 600ms linear 300ms;
   box-shadow: 0px 0px 0px 0px #fff;
 }
 
@@ -587,7 +569,7 @@
 .who_are .wrap.show#who_are_text{
   -webkit-transform: none;
   transform: none;
-  transition: transform 300ms linear;
+  transition: transform 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .who_are .text .name{
@@ -659,6 +641,7 @@
     margin-bottom: 30px;
     font-weight: bold;
     color: #571617;
+    text-shadow: 0px 1px 1px #fff
 }
 
 .how .wrap{
@@ -671,6 +654,7 @@
   text-align: center;
   display: inline-block;
   color: #571617;
+  text-shadow: 0px 1px 1px #fff
 }
 .how .wrap.left{
   text-align: left;
@@ -785,7 +769,7 @@
 	-webkit-transform: none;
   transform: none;
   opacity: 1;
-  transition: 300ms linear;
+  transition: 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .price .table a{
@@ -1025,31 +1009,21 @@
   text-decoration: underline;
 }
 
-/*.for_me .wrap{
-	width: 100%;
-	height: 100%;
-	transform: translateX(-100%);
-}
+@media (max-height: 480px) {
+	.front{
+		background-position: center center;
+	}
 
-.for_me .content{
-	width: 100%;
-	height: 100%;
-	background-color: red;
-	border-radius: 10px;
-	box-shadow: -2px 7px 9px 2px #aaa;
-	transform: scale(0.8);
+	.front .title{
+		transform: translateY(1000%);
+		bottom: 180px;
+	}
+	.front .subtitle{
+		transform: translateY(1000%);
+		bottom: 140px;
+	}
+	.front .button{
+		transform: translateY(1000%);
+		bottom: 50px;
+	}
 }
-
-.for_me .wrap_for_me {
-  -webkit-transform: none;
-  transform: none;
-  transition: transform 300ms linear;
-}
-
-.for_me .content_for_me {
-  -webkit-transform: none;
-  transform: none;
-  border-radius: 0px;
-  box-shadow: 0px 0px 0px 0px #fff;
-  transition: 300ms linear 350ms;
-}*/
