@@ -84,9 +84,6 @@ $(".pay .close-button").click(function(){
 
 
 $('#send-sing_up').click(function(){
-	console.log($('#name-sing_up').val());
-	console.log($('#phone-sing_up').val());
-	console.log($('#email-sing_up').val());
 
 	$.ajax({
       type: "GET", //Метод отправки
@@ -98,6 +95,10 @@ $('#send-sing_up').click(function(){
       },
       success: function() {
         //код в этом блоке выполняется при успешной отправке сообщения
+
+		$('.wrap_form_sucsess').show();
+		$('.wrap_form_input').hide();
+
         console.log("Ваше сообщение отпрвлено!");
       }
     });
