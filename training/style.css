@@ -976,6 +976,27 @@
   transform: translate3d(-66.6%, 0, 0);
 }
 
+.form .text{
+  font-size: 20px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.form .text span{
+  font-size: 24px;
+  display: block;
+  margin-top: 14px;
+}
+
+.wrap_form_sucsess{
+  display: none;
+}
+
+.wrap_form_sucsess .text span{
+  margin-top: 25px;
+  margin-bottom: 35px;
+}
 
 .contacts{
 	background-image: url(img/final.jpg);
