@@ -7,76 +7,139 @@
 		box-sizing: border-box;	
 }
 
-
-.select-field{
-  overflow: hidden;
-  width: 300px;
+/* ===== Select Box ===== */
+.sel {
+  font-size: 1rem;
+  display: inline-block;
+  margin: 3em 2em;
+  width: 350px;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
 }
 
-.select-field .field{
-  padding: 10px;
-  font-size: 23px;
-  border-bottom:1px solid black;
-  
-}
-
-.select-field ul{
-    display: inline;
-    padding: 0;
-    position: relative;
-}
-
-.select-field li{
-  transform: translateX(100%);
-  list-style: none;
-    padding: 10px;
-  font-size: 18px;
-  border-bottom:1px solid black;
-  background-color: #fff;
+.sel::before {
   position: absolute;
+  content: '\f063';
+  font-family: 'FontAwesome';
+  font-size: 2em;
+  color: #FFF;
+  right: 20px;
+  top: calc(50% - 0.5em);
 }
 
-.select-field li.active{
-  color:red;
+.sel.active::before {
+  transform: rotateX(-180deg);
 }
 
-.select-field ul.show li:first-child{
-  -webkit-transform: none;
-  transform: none;
-  transition: transform 200ms linear;
+.sel__placeholder {
+  display: block;
+  font-family: 'Quicksand';
+  font-size: 2.3em;
+  color: #838e95;
+  padding: 0.2em 0.5em;
+  text-align: left;
+  pointer-events: none;
+  user-select: none;
+  visibility: visible;
 }
 
-.select-field ul.show li:nth-child(2){
-  -webkit-transform: none;
-  transform: none;
-  transition: transform 200ms linear 100ms;
+.sel.active .sel__placeholder {
+  visibility: hidden;
 }
 
-.select-field ul.show li:nth-child(3){
-  -webkit-transform: none;
-  transform: none;
-  transition: transform 200ms linear 200ms;
+.sel__placeholder::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.2em 0.5em;
+  content: attr(data-placeholder);
+  visibility: hidden;
 }
 
-.select-field ul.show li:nth-child(4){
-  -webkit-transform: none;
-  transform: none;
-  transition: transform 200ms linear 300ms;
+.sel.active .sel__placeholder::before {
+  visibility: visible;
 }
 
-.select-field ul li:nth-child(4){
-
-  transition: transform 200ms linear;
+.sel__box {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: -4px;
+  display: none;
+  list-style-type: none;
+  text-align: left;
+  font-size: 1em;
+  background-color: #FFF;
+  width: calc(100% + 8px);
+  box-sizing: border-box;
 }
 
-.select-field ul li:nth-child(3){
-  transition: transform 200ms linear 100ms;
+.sel.active .sel__box {
+  display: block;
+  animation: fadeInUp 500ms;
 }
 
-.select-field ul li:nth-child(2){
-  transition: transform 200ms linear 200ms;
+.sel__box__options {
+  display: list-item;
+  font-family: 'Quicksand';
+  font-size: 1.5em;
+  color: #838e95;
+  padding: 0.5em 1em;
+  user-select: none;
 }
 
-.select-field ul li:first-child{
-  transition: transform 200ms linear 300ms;
+.sel__box__options::after {
+  content: '\f00c';
+  font-family: 'FontAwesome';
+  font-size: 0.5em;
+  margin-left: 5px;
+  display: none;
+}
+
+.sel__box__options.selected::after {
+  display: inline;
+}
+
+.sel__box__options:hover {
+  background-color: #ebedef;
+}
+
+/* ----- Select Box Black Panther ----- */
+.sel {
+  border-bottom: 4px solid rgba(0, 0, 0, 0.3);
+}
+
+.sel--black-panther {
+  z-index: 3;
+}
+
+/* ----- Select Box Superman ----- */
+.sel--superman {
+/*   display: none; */
+  z-index: 2;
+}
+
+/* ===== Keyframes ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
