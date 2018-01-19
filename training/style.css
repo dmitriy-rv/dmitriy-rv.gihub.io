@@ -1115,6 +1115,7 @@
   background-color: #FFF;
   width: calc(100% + 8px);
   box-sizing: border-box;
+  z-index: 100;
 }
 
 .sel.active .sel__box {
@@ -1125,9 +1126,11 @@
 .sel__box__options {
   display: list-item;
   font-size: 20px;
-  color: #9da8b2;
-  padding: 0.5em 1em;
+  color: #696969;
+  padding: 10px 5px;
   user-select: none;
+  background-color: #fff;
+  border-bottom: 1px solid #696969;
 }
 
 .sel__box__options::after {
