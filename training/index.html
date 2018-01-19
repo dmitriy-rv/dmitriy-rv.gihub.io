@@ -26,7 +26,7 @@
 				<style>.tinkoffPayRow{display:block;margin:1%;width:160px;}</style>
 
 				<form name="TinkoffPayForm" onsubmit="pay(this); return false;">
-					<input class="tinkoffPayRow" type="hidden" name="terminalkey" value="	1511828881980DEMO">
+					<input class="tinkoffPayRow" type="hidden" name="terminalkey" value="1511828881980">
 					<input class="tinkoffPayRow" type="hidden" name="frame" value="false">
 					<input class="tinkoffPayRow" type="hidden" name="language" value="ru">
 				    <input class="tinkoffPayRow" type="hidden" placeholder="Сумма заказа" name="amount" value="6000">
@@ -537,17 +537,15 @@
 			</div>
 			<div class="text">
 				Время проведения занятия:
-				<span>
+				<span  class="big">
 					19:00 - 21:00
 				</span>
 			</div>
 			<div class="sel">
 			  <select name="select-profession" id="select-profession">
 			    <option value="" disabled>Выберите дату</option>
-			    <option value="hacker">25 января</option>
-			    <option value="gamer">26 января</option>
-			    <option value="developer">27 января</option>
-			    <option value="programmer">28 января</option>
+			    <option value="2 февраля">2 февраля</option>
+			    <option value="5 февраля">5 февраля</option>
 			  </select>
 			</div>
 			<span class="input input--nao">
@@ -587,8 +585,8 @@
 				Поздравляем!
 			</div>
 			<div class="text">
-				<span>Теперь вы участник группы.</span>
-				28 января в 19.00 переходите по ссылке, указанной в письме, и меняйте свою жизнь к лучшему:)
+				<span class="big">Теперь вы участник группы.</span>
+				<span class="change"></span> в 19.00 переходите по ссылке, указанной в письме, и меняйте свою жизнь к лучшему:)
 			</div>
 		</div>
 	</div>
@@ -631,6 +629,44 @@
 		</div>
 	</div>
 
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109657217-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-109657217-1');
+	</script>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+	    (function (d, w, c) {
+	        (w[c] = w[c] || []).push(function() {
+	            try {
+	                w.yaCounter47028936 = new Ya.Metrika({
+	                    id:47028936,
+	                    clickmap:true,
+	                    trackLinks:true,
+	                    accurateTrackBounce:true,
+	                    webvisor:true
+	                });
+	            } catch(e) { }
+	        });
+
+	        var n = d.getElementsByTagName("script")[0],
+	            s = d.createElement("script"),
+	            f = function () { n.parentNode.insertBefore(s, n); };
+	        s.type = "text/javascript";
+	        s.async = true;
+	        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+	        if (w.opera == "[object Opera]") {
+	            d.addEventListener("DOMContentLoaded", f, false);
+	        } else { f(); }
+	    })(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/47028936" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
 
 	<script src="jquery-3.2.1.min.js"></script>
 	<script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff.js"></script>

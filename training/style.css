@@ -983,7 +983,7 @@
   padding-right: 10px;
 }
 
-.form .text span{
+.form .text span.big{
   font-size: 24px;
   display: block;
   margin-top: 14px;
@@ -993,7 +993,7 @@
   display: none;
 }
 
-.wrap_form_sucsess .text span{
+.wrap_form_sucsess .text span.big{
   margin-top: 25px;
   margin-bottom: 35px;
 }

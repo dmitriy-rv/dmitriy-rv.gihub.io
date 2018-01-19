@@ -89,6 +89,7 @@ $('#send-sing_up').click(function(){
       type: "GET", //Метод отправки
       url: "/send-sing_up.php", //путь до php фаила отправителя
       data: {
+      	date:$('#select-profession').val(),
       	name:$('#name-sing_up').val(),
       	phone:$('#phone-sing_up').val(),
       	email:$('#email-sing_up').val()
@@ -99,6 +100,7 @@ $('#send-sing_up').click(function(){
 		$('.wrap_form_sucsess').show();
 		$('.wrap_form_input').hide();
 
+		$('.change').html($('#select-profession').val());
         console.log("Ваше сообщение отпрвлено!");
       }
     });
