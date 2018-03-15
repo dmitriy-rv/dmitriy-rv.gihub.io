@@ -1,163 +1,110 @@
-// (function($){
-//     $(window).on("load",function(){
-//         $(".scroll-wrap").mCustomScrollbar({
-//         	documentTouchScroll: true
-//         });
-//     });
-// })(jQuery);
+$(document).on("click",".toJoin", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
 
-$(".move").click(function(){
-	var position = $(".utp1").offset().top;
-	$('html,body').animate({scrollTop: position},'slow');
-});
-
-$(".show-popup-feedback").click(function(){
-	$('.feedback').addClass('flex');
-	$('.big-wrap').addClass('blur');
-});
-
-$(".popup-wrap").click(function(){
-	$('.feedback').removeClass('flex');
-	$('.big-wrap').removeClass('blur');
-});
-
-$(".feedback .close-button").click(function(){
-	$('.feedback').removeClass('flex');
-	$('.big-wrap').removeClass('blur');
-});
-
-$(".show-popup-offer").click(function(){
-	$('.offer').addClass('flex');
-	$('.big-wrap').addClass('blur');
-});
-
-$(".popup-wrap").click(function(){
-	$('.offer').removeClass('flex');
-	$('.big-wrap').removeClass('blur');
-});
-
-$(".offer .close-button").click(function(){
-	$('.offer').removeClass('flex');
-	$('.big-wrap').removeClass('blur');
-});
-
-$(".show-popup-pay").click(function(){
-	$('.pay').addClass('flex');
-	$('.big-wrap').addClass('blur');
-});
-
-$(".popup-wrap").click(function(){
-	$('.pay').removeClass('flex');
-	$('.big-wrap').removeClass('blur');
-});
-
-$(".pay .close-button").click(function(){
-	$('.pay').removeClass('flex');
-	$('.big-wrap').removeClass('blur');
-});
+        //забираем идентификатор бока с атрибута href
+        var id  = $(this).attr('href'),
+ 
+        //узнаем высоту от начала страницы до блока на который ссылается якорь
+        top = $(id).offset().top;
+         
+        //анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({scrollTop: top}, 2000);
+    });
 
 
-$(".popup-wrap .content").click(function(e) {
-	e.stopImmediatePropagation();
-});
+$('.more').click(function(event){
+			$(event.target.offsetParent).addClass('show_more');
+		});
 
-$(".phone-click").click(function(){
-	$('.phone-click').addClass('active');
-	$('.email-click').removeClass('active');
-	$('.vk-click').removeClass('active');
+		$('.close').click(function(event){
+			$(event.target.parentElement.offsetParent).removeClass('show_more');
+		});
 
-	$('.phone-form').show();
-	$('.email-form').hide();
-	$('.vk-form').hide();
-	$('.success-email').hide();
-	$('.success-phone').hide();
-	$('.error-form').hide();
-});
+		$('.afraid .item .preview').click(function(event){
+			if (event.target.classList[0] == 'preview'){
+				$(event.target.parentElement).toggleClass('show_more');
+			} else{
+				$(event.target.parentElement.parentElement).toggleClass('show_more');
+			}
+			
+		});
 
-$(".email-click").click(function(){
-	$('.phone-click').removeClass('active');
-	$('.email-click').addClass('active');
-	$('.vk-click').removeClass('active');
+		$('.list .item').click(function(event){
 
-	$('.phone-form').hide();
-	$('.email-form').show();
-	$('.vk-form').hide();
-	$('.success-email').hide();
-	$('.success-phone').hide();
-	$('.error-form').hide();
-});
+			if (event.target.classList[0] == 'item'){
+				$(event.target).toggleClass('show_more');
+			} else{
+				$(event.target.parentElement).toggleClass('show_more');
+			}
+		});
 
-$(".vk-click").click(function(){
-	$('.phone-click').removeClass('active');
-	$('.email-click').removeClass('active');
-	$('.vk-click').addClass('active');
+		$('.can-wrap').slick({
+			centerMode: true,
+  			centerPadding: '60px',
+		  	infinite: false,
+		  	slidesToShow: 1,
+		  	slidesToScroll: 1,
+		  	variableWidth: true,
+		  	dots: true,
+		  	arrows: false,
+		  	customPaging : function(slider, i) {
+		        return '<span></span>';
+		    },
+		});
 
-	$('.phone-form').hide();
-	$('.email-form').hide();
-	$('.vk-form').show();
-	$('.success-email').hide();
-	$('.success-phone').hide();
-	$('.error-form').hide();
-});
+		(function() {
+			// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+			if (!String.prototype.trim) {
+				(function() {
+					// Make sure we trim BOM and NBSP
+					var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+					String.prototype.trim = function() {
+						return this.replace(rtrim, '');
+					};
+				})();
+			}
 
-$('#send-email').click(function(){
-	console.log($('#name-email').val());
-	console.log($('#answer-email').val());
+			[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+				// in case the input is already filled..
+				if( inputEl.value.trim() !== '' ) {
+					classie.add( inputEl.parentNode, 'input--filled' );
+				}
+
+				// events:
+				inputEl.addEventListener( 'focus', onInputFocus );
+				inputEl.addEventListener( 'blur', onInputBlur );
+			} );
+
+			function onInputFocus( ev ) {
+				classie.add( ev.target.parentNode, 'input--filled' );
+			}
+
+			function onInputBlur( ev ) {
+				if( ev.target.value.trim() === '' ) {
+					classie.remove( ev.target.parentNode, 'input--filled' );
+				}
+			}
+		})();
+
+$('#send-sing_up').click(function(){
+	$('.wrap_form_sucsess').show();
+	$('.wrap_form_input').hide();
 
 	$.ajax({
       type: "GET", //Метод отправки
-      url: "/send-mail.php", //путь до php фаила отправителя
+      url: "/send-sing_up.php", //путь до php фаила отправителя
       data: {
-      	name:$('#name-email').val(),
-      	email:$('#answer-email').val()
+      	name:$('#name-sing_up').val(),
+      	phone:$('#phone-sing_up').val()
       },
       success: function() {
         //код в этом блоке выполняется при успешной отправке сообщения
-        console.log("Ваше сообщение отпрвлено!");
-        $('.phone-form').hide();
-		$('.email-form').hide();
-		$('.vk-form').hide();
-		$('.success-email').show();
-		$('.success-phone').hide();
-		$('.error-form').hide();
-      }
-    });
-});
 
-$('#send-phone').click(function(){
-	console.log($('#name-phone').val());
-	console.log($('#answer-phone').val());
+		$('.wrap_form_sucsess').show();
+		$('.wrap_form_input').hide();
 
-	$.ajax({
-      type: "GET", //Метод отправки
-      url: "/send-phone.php", //путь до php фаила отправителя
-      data: {
-      	name:$('#name-phone').val(),
-      	phone:$('#answer-phone').val()
-      },
-      success: function() {
-        //код в этом блоке выполняется при успешной отправке сообщения
-        console.log("Ваше сообщение отпрвлено!");
-        $('.phone-form').hide();
-		$('.email-form').hide();
-		$('.vk-form').hide();
-		$('.success-email').hide();
-		$('.success-phone').show();
-		$('.error-form').hide();
-      }
-    });
-});
-
-$('#send-pay').click(function(){
-
-	$.ajax({
-      type: "POST", //Метод отправки
-      url: "https://payment.yandex.net/api/v3/payments/1", //путь до php фаила отправителя
-      data: {
-      	500407:'test_FhL1auNG7-b7Vq42X8t_XrNh_rKd0V8sC1fUzml0-80'
-      },
-      success: function() {
-        //код в этом блоке выполняется при успешной отправке сообщения
+		$('.change').html($('#select-profession').val());
         console.log("Ваше сообщение отпрвлено!");
       }
     });
