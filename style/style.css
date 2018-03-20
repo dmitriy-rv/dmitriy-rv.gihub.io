@@ -8,14 +8,17 @@
   font-family: 'Noto Sans', sans-serif;
   text-align: center;
   font-size: 32px;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
   color: #000; }
+  @media (min-width: 1024px) {
+    .title {
+      margin-bottom: 48px; } }
 
-.second_line {
-  margin-bottom: 0 !important; }
-
+@media (min-width: 1024px) {
+  .second_line {
+    margin-bottom: 0 !important; } }
 .front {
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: url(../img/front_my.jpg);
@@ -31,17 +34,19 @@
   .front .wrap {
     width: 100%;
     max-width: 1320px;
-    margin: auto; }
-    @media (min-width: 1024px) {
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 48px;
+    padding-bottom: 48px; }
+    @media (max-width: 1380px) {
       .front .wrap {
-        padding-top: 48px;
-        padding-bottom: 48px; } }
-  .front .title-block {
-    width: 50%;
-    float: right; }
+        padding-left: 24px;
+        padding-right: 24px; } }
   .front .title {
     text-align: center;
-    font-size: 44px;
+    font-size: 32px;
+    margin-bottom: 32px;
     width: 100%;
     font-family: 'Noto Sans', sans-serif;
     color: #333;
@@ -49,8 +54,8 @@
     will-change: transform; }
   .front .subtitle {
     text-align: center;
-    font-size: 26px;
-    margin-bottom: 48px;
+    font-size: 18px;
+    margin-bottom: 32px;
     width: 100%;
     color: #000;
     text-shadow: 0px 1px 6px #fff;
@@ -59,8 +64,6 @@
     transition: 200ms;
     will-change: transform;
     height: 50px;
-    margin-left: 40px;
-    margin-right: 40px;
     will-change: transform;
     text-align: center; }
   .front .button {
@@ -77,12 +80,30 @@
     color: #fff;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     transition: 200ms;
-    width: 300px; }
+    max-width: 300px;
+    width: 100%; }
+  @media (min-width: 1024px) {
+    .front .title-block {
+      width: 50%;
+      float: right; }
+    .front .title {
+      font-size: 44px;
+      margin-bottom: 48px; }
+    .front .subtitle {
+      font-size: 26px;
+      margin-bottom: 48px; }
+    .front .button-wrap {
+      margin-left: 40px;
+      margin-right: 40px; } }
 
 .warm {
   width: 100%;
   max-width: 1320px;
   margin: auto;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 48px;
+  padding-bottom: 48px;
   overflow: hidden;
   /*.warm .wrap#warm_foto{
   	transform: translateX(-100%);
@@ -100,10 +121,10 @@
     transform: none;
     transition: transform 600ms cubic-bezier(0.215, 0.61, 0.355, 1);
   }*/ }
-  @media (min-width: 1024px) {
+  @media (max-width: 1380px) {
     .warm {
-      padding-top: 48px;
-      padding-bottom: 48px; } }
+      padding-left: 24px;
+      padding-right: 24px; } }
   .warm .button {
     font-family: 'Noto Sans', sans-serif;
     display: block;
@@ -151,90 +172,146 @@
       margin-bottom: 24px;
       font-family: 'Noto Sans', sans-serif;
       color: rgba(0, 0, 0, 0.9); }
+  .warm .wrap {
+    padding-top: 24px;
+    padding-bottom: 24px; }
   .warm .button_wrap {
-    display: flex; }
+    display: flex;
+    justify-content: space-between; }
+    .warm .button_wrap .button {
+      margin: 0;
+      width: 150px; }
+      @media (max-width: 375px) {
+        .warm .button_wrap .button {
+          width: 125px; } }
+  @media (max-width: 1023px) {
+    .warm .warm_foto {
+      margin-left: -24px;
+      margin-right: -24px;
+      margin-top: -48px; } }
   @media (min-width: 1024px) {
     .warm {
       display: flex;
       justify-content: space-between; }
       .warm .warm_foto {
-        width: 620px; }
+        width: 620px; } }
+    @media (min-width: 1024px) and (max-width: 1380px) {
+      .warm .warm_foto {
+        width: 600px; } }
+    @media (min-width: 1024px) and (max-width: 1260px) {
+      .warm .warm_foto {
+        width: 480px; } }
+  @media (min-width: 1024px) {
         .warm .warm_foto .foto {
           height: auto; }
       .warm .warm_text {
         width: 620px;
         padding-left: 48px;
-        padding-right: 48px; }
+        padding-right: 48px; } }
+    @media (min-width: 1024px) and (max-width: 1380px) {
+      .warm .warm_text {
+        width: 600px; } }
+    @media (min-width: 1024px) and (max-width: 1260px) {
+      .warm .warm_text {
+        width: 480px; } }
+  @media (min-width: 1024px) {
+        .warm .warm_text .wrap {
+          padding-top: 0px;
+          padding-bottom: 0px; }
         .warm .warm_text span {
           font-size: 16px;
           line-height: 1.5;
           color: rgba(0, 0, 0, 0.7); }
         .warm .warm_text .button_wrap {
           margin-top: 50px;
-          width: 450px;
-          justify-content: space-between; }
+          width: 450px; }
           .warm .warm_text .button_wrap .button {
             margin: 0;
             width: 200px; } }
 
 .can {
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: url(../img/bad.jpg); }
   .can .content {
     width: 100%;
     max-width: 1320px;
-    margin: auto; }
-    @media (min-width: 1024px) {
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 48px;
+    padding-bottom: 48px; }
+    @media (max-width: 1380px) {
       .can .content {
-        padding-top: 48px;
-        padding-bottom: 48px; } }
+        padding-left: 24px;
+        padding-right: 24px; } }
+  .can .can-wrap {
+    margin-left: -24px;
+    margin-right: -24px; }
   .can .card {
-    width: 240px;
-    height: 350px;
-    border-radius: 5px;
-    -webkit-box-shadow: 0px 2px 3px #777;
-    box-shadow: 0px 2px 3px #777;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    width: 285px;
+    height: 405px;
     overflow: hidden;
     position: relative;
-    margin: 10px; }
+    margin: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    outline: none; }
     .can .card .img {
       width: 100%;
-      height: 240px; }
+      height: 295px; }
+      .can .card .img img {
+        width: 100%;
+        height: 100%; }
     .can .card .more {
       position: absolute;
       bottom: 20px;
       right: 20px;
       transition: 0.1s 0.3s;
-      cursor: pointer; }
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #ff5722; }
     .can .card .text {
       width: 100%;
       height: 100%;
       background-color: #fff;
       transition: 0.2s;
       top: 0;
-      transform: translateY(240px);
-      position: absolute; }
+      transform: translateY(295px);
+      position: absolute;
+      padding: 16px; }
       .can .card .text .close {
         position: absolute;
         top: 10px;
         right: 10px;
-        font-size: 18px;
+        width: 15px;
+        height: 15px;
         opacity: 0;
-        transition: 0.2s; }
+        transition: 0.2s;
+        background-image: url("../img/add.svg");
+        transform: rotate(45deg); }
       .can .card .text .bads {
-        font-weight: bold;
         font-size: 18px;
-        margin-top: 15px;
+        transition: 0.2s;
         text-align: center; }
       .can .card .text .info {
-        margin-top: 30px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: rgba(0, 0, 0, 0.7);
+        line-height: 1.3;
+        margin-top: 24px;
         transition: 0.2s 0.1s;
         transform: translateY(52px);
         opacity: 0; }
     .can .card.show_more .text {
       transform: translateY(0px); }
+      .can .card.show_more .text .bads {
+        margin-top: 15px; }
       .can .card.show_more .text .info {
         opacity: 1;
         transform: translateY(0px); }
@@ -259,10 +336,10 @@
       border-radius: 10px;
       background-color: grey; }
       .can .slick-dots li.slick-active {
-        background-color: blue; }
+        background-color: #ff5722; }
   .can .can-desctop {
     display: none; }
-  @media (min-width: 1024px) {
+  @media (min-width: 1260px) {
     .can .can-desctop {
       display: flex;
       flex-wrap: wrap;
@@ -275,7 +352,14 @@
         height: auto;
         margin: 0;
         margin-bottom: 64px;
-        display: flex; }
+        display: flex; } }
+    @media (min-width: 1260px) and (max-width: 1380px) {
+      .can .can-desctop .card {
+        width: 600px; } }
+    @media (min-width: 1260px) and (max-width: 1260px) {
+      .can .can-desctop .card {
+        width: 480px; } }
+  @media (min-width: 1260px) {
         .can .can-desctop .card .img {
           width: 200px;
           height: 300px; }
@@ -309,16 +393,20 @@
 .list {
   width: 100%;
   max-width: 1320px;
-  margin: auto; }
-  @media (min-width: 1024px) {
+  margin: auto;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 48px;
+  padding-bottom: 48px; }
+  @media (max-width: 1380px) {
     .list {
-      padding-top: 48px;
-      padding-bottom: 48px; } }
+      padding-left: 24px;
+      padding-right: 24px; } }
   .list .item {
-    width: 345px;
-    height: 64px;
+    width: 100%;
+    max-height: 64px;
     overflow: hidden;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
     margin: auto;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -339,7 +427,7 @@
       transition: 0.2s;
       opacity: 0; }
     .list .item.show_more {
-      height: 150px; }
+      max-height: 500px; }
       .list .item.show_more img {
         transform: rotateX(180deg); }
       .list .item.show_more .text {
@@ -352,6 +440,7 @@
     .list .item {
       width: 400px;
       height: auto !important;
+      max-height: 100%;
       border-bottom: 0px;
       margin: 0;
       margin-bottom: 100px;
@@ -371,7 +460,7 @@
         opacity: 1; } }
 
 .metod {
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: url(../img/metod.jpg); }
@@ -403,17 +492,21 @@
       background-color: #fff;
       color: #ff5722; }
   .metod .button {
-    width: 280px;
+    width: auto;
     margin: auto;
     margin-top: 24px; }
   .metod .wrap {
     width: 100%;
     max-width: 1320px;
-    margin: auto; }
-    @media (min-width: 1024px) {
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 48px;
+    padding-bottom: 48px; }
+    @media (max-width: 1380px) {
       .metod .wrap {
-        padding-top: 48px;
-        padding-bottom: 48px; } }
+        padding-left: 24px;
+        padding-right: 24px; } }
   .metod .content {
     font-size: 16px;
     line-height: 1.5;
@@ -421,7 +514,14 @@
     background-color: #fff;
     border-radius: 3px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    margin: auto; }
+    margin: auto;
+    padding: 24px; }
+    .metod .content ul {
+      padding-left: 18px;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+      .metod .content ul li {
+        padding-bottom: 8px; }
   @media (min-width: 1024px) {
     .metod {
       display: flex;
@@ -429,25 +529,32 @@
       .metod .content {
         width: 620px;
         margin: 0;
-        padding: 48px; }
-        .metod .content ul {
-          padding-left: 18px;
-          padding-top: 10px;
-          padding-bottom: 10px; }
-          .metod .content ul li {
-            padding-bottom: 8px; } }
+        padding: 48px; } }
+    @media (min-width: 1024px) and (max-width: 1380px) {
+      .metod .content {
+        width: 600px; } }
+    @media (min-width: 1024px) and (max-width: 1260px) {
+      .metod .content {
+        width: 480px; } }
+  @media (min-width: 1024px) {
+        .metod .content .button {
+          width: 280px; } }
 
 .afraid {
   width: 100%;
   max-width: 1320px;
-  margin: auto; }
-  @media (min-width: 1024px) {
+  margin: auto;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 48px;
+  padding-bottom: 48px; }
+  @media (max-width: 1380px) {
     .afraid {
-      padding-top: 48px;
-      padding-bottom: 48px; } }
+      padding-left: 24px;
+      padding-right: 24px; } }
   .afraid .item {
-    width: 345px;
-    height: 75px;
+    width: 100%;
+    max-height: 75px;
     margin: auto;
     border-radius: 5px;
     box-shadow: 0px 2px 3px #777;
@@ -460,31 +567,53 @@
       display: flex;
       position: relative;
       align-items: center;
-      padding: 15px; }
+      padding: 12px; }
     .afraid .item .title_hide {
       padding-left: 15px;
+      padding-right: 10px;
       font-size: 18px;
       opacity: 1;
-      transition: 0.2s; }
+      transition: 0.2s;
+      flex-grow: 1;
+      flex-shrink: 1; }
     .afraid .item .img {
       width: 50px;
       height: 50px;
+      transition: 0.2s;
+      transform-origin: 50% 50%; }
+    .afraid .item .more {
+      flex-grow: 0;
+      flex-shrink: 0;
+      width: 15px;
+      height: 15px;
+      background-image: url("../img/add.svg");
       transition: 0.2s; }
     .afraid .item .text_show {
       font-size: 16px;
       line-height: 1.5;
       color: rgba(0, 0, 0, 0.7);
+      padding: 24px;
       opacity: 0;
       transition: 0.2s; }
+      .afraid .item .text_show .title_show {
+        font-size: 24px;
+        line-height: 1.5;
+        margin-bottom: 24px;
+        font-family: 'Noto Sans', sans-serif;
+        color: rgba(0, 0, 0, 0.9);
+        font-size: 20px;
+        text-align: center; }
     .afraid .item.show_more {
-      height: 300px;
+      max-height: 500px;
       align-items: normal; }
       .afraid .item.show_more .img {
-        transform: translateX(100px) scale(1.2); }
+        transform: translateX(0px) scale(1.2); }
       .afraid .item.show_more .title_hide {
         opacity: 0; }
       .afraid .item.show_more .text_show {
         opacity: 1; }
+      .afraid .item.show_more .more {
+        transform: translateY(-15px) rotate(-45deg); }
   @media (min-width: 1024px) {
     .afraid .afraid_wrap {
       display: -webkit-flex;
@@ -497,9 +626,17 @@
       .afraid .afraid_wrap .item {
         width: 620px;
         height: auto;
+        max-height: 100%;
         box-shadow: none;
         margin: 0;
-        margin-bottom: 96px; }
+        margin-bottom: 96px; } }
+    @media (min-width: 1024px) and (max-width: 1380px) {
+      .afraid .afraid_wrap .item {
+        width: 600px; } }
+    @media (min-width: 1024px) and (max-width: 1260px) {
+      .afraid .afraid_wrap .item {
+        width: 480px; } }
+  @media (min-width: 1024px) {
         .afraid .afraid_wrap .item .preview {
           height: auto; }
         .afraid .afraid_wrap .item img {
@@ -522,18 +659,22 @@
           text-align: center; } }
 
 .how {
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: url(../img/how.jpg); }
   .how .content {
     width: 100%;
     max-width: 1320px;
-    margin: auto; }
-    @media (min-width: 1024px) {
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 48px;
+    padding-bottom: 48px; }
+    @media (max-width: 1380px) {
       .how .content {
-        padding-top: 48px;
-        padding-bottom: 48px; } }
+        padding-left: 24px;
+        padding-right: 24px; } }
   .how .title {
     color: #fff;
     text-shadow: 0px 1px 6px #000; }
@@ -571,11 +712,15 @@
 .interaction {
   width: 100%;
   max-width: 1320px;
-  margin: auto; }
-  @media (min-width: 1024px) {
+  margin: auto;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 48px;
+  padding-bottom: 48px; }
+  @media (max-width: 1380px) {
     .interaction {
-      padding-top: 48px;
-      padding-bottom: 48px; } }
+      padding-left: 24px;
+      padding-right: 24px; } }
   .interaction .button {
     font-family: 'Noto Sans', sans-serif;
     display: block;
@@ -613,12 +758,22 @@
     font-family: 'Noto Sans', sans-serif;
     color: rgba(0, 0, 0, 0.9);
     display: none; }
+  .interaction .price .title {
+    font-size: 24px;
+    margin-bottom: 24px; }
+  .interaction .price span {
+    display: block;
+    font-size: 32px;
+    margin-bottom: 32px;
+    text-align: center; }
+  .interaction .form .button {
+    width: auto; }
   .interaction .input {
     position: relative;
     z-index: 1;
     display: inline-block;
     margin: 1em;
-    max-width: 80%;
+    max-width: 100%;
     width: calc(100% - 2em);
     vertical-align: top; }
   .interaction .input__field {
@@ -714,9 +869,17 @@
       .interaction .price,
       .interaction .form {
         width: 620px;
-        text-align: center; }
+        text-align: center; } }
+    @media (min-width: 1024px) and (max-width: 1380px) {
+      .interaction .price,
+      .interaction .form {
+        width: 600px; } }
+    @media (min-width: 1024px) and (max-width: 1260px) {
+      .interaction .price,
+      .interaction .form {
+        width: 480px; } }
+  @media (min-width: 1024px) {
       .interaction .price span {
-        display: block;
         font-size: 48px;
         margin-bottom: 48px; }
       .interaction .button {
@@ -724,18 +887,22 @@
         margin: auto; } }
 
 .contacts {
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: url(../img/contacts.jpg); }
   .contacts .wrap {
     width: 100%;
     max-width: 1320px;
-    margin: auto; }
-    @media (min-width: 1024px) {
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 48px;
+    padding-bottom: 48px; }
+    @media (max-width: 1380px) {
       .contacts .wrap {
-        padding-top: 48px;
-        padding-bottom: 48px; } }
+        padding-left: 24px;
+        padding-right: 24px; } }
   .contacts .content {
     background-color: #fff;
     border-radius: 3px;
@@ -743,7 +910,7 @@
     background-color: white;
     border-radius: 5px;
     /*box-shadow: 0px 2px 3px 1px #bf360ca1;*/
-    padding: 48px; }
+    padding: 24px; }
     .contacts .content ul {
       padding-left: 0;
       padding-top: 25px; }
@@ -766,7 +933,15 @@
       justify-content: space-between; }
       .contacts .content {
         width: 620px;
-        float: right; }
+        float: right;
+        padding: 48px; } }
+    @media (min-width: 1024px) and (max-width: 1380px) {
+      .contacts .content {
+        width: 600px; } }
+    @media (min-width: 1024px) and (max-width: 1260px) {
+      .contacts .content {
+        width: 480px; } }
+  @media (min-width: 1024px) {
         .contacts .content ul {
           padding-top: 0; }
         .contacts .content li {
